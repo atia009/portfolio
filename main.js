@@ -48,6 +48,9 @@ projects.push(project3);
 
 
 // functions
+function startWebsiteFunctionality() {
+}
+
 function generateProjectsMarkup() {
     let cardNum = 0;
     const markup = projects.map(project => {
@@ -74,4 +77,5 @@ function generateTechsMarkup(techList) {
     return markup.join("");
 }
 
-console.log(generateProjectsMarkup());
+// event listner
+window.addEventListener("DOMContentLoaded", startWebsiteFunctionality);
