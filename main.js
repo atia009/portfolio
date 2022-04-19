@@ -56,11 +56,22 @@ function generateProjectsMarkup() {
         <p class="card__number">0${++cardNum}</p>
         <img src="${project.img}" alt="demo image of ${project.title}" class="card__img">
         <p class="card__desc">${project.desc}</p>
-        <ul class="techs"></ul>
+        <ul class="techs">
+        ${generateTechsMarkup(project.tech)}</ul>
         <button type="button" class="card__btn"><a href="${project.demo}" class="card__link">Demo<img src="images/icons/external-link.svg" class="card__icon" alt="external link icon"></a></button>
         <button type="button" class="card__btn"><a href="${project.link}" class="card__link">GitHub<img src="images/icons/external-link.svg" class="card__icon" alt="external link icon"></a></button>
-    </div>`
+    </div>
+    `
     })
     return markup.join("");
 }
 
+function generateTechsMarkup(techList) {
+    const markup = techList.map(tech => {
+        return `<li class="tech">${tech}</li>
+        `
+    })
+    return markup.join("");
+}
+
+console.log(generateProjectsMarkup());
