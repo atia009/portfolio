@@ -49,6 +49,7 @@ projects.push(project3);
 
 // functions
 function startWebsiteFunctionality() {
+    setHTMLOfElement(document.querySelector(`.cards`), generateProjectsMarkup());
 }
 
 function generateProjectsMarkup() {
@@ -75,6 +76,10 @@ function generateTechsMarkup(techList) {
         `
     })
     return markup.join("");
+}
+
+function setHTMLOfElement(element, markup) {
+    element.innerHTML = markup;
 }
 
 // event listner
