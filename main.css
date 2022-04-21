@@ -39,3 +39,52 @@
   font-family: "Libre Baskerville Regular";
   src: url(fonts/LibreBaskerville-Regular.ttf);
 }
+
+/* global styles */
+html {
+  box-sizing: border-box;
+  font-family: "Libre Baskerville Regular", serif;
+  font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--bg-color);
+  margin: 0 auto;
+  text-align: center;
+}
+
+a {
+  color: var(--txt-color);
+  font-family: "League Spartan Semi-Bold", sans-serif;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+button {
+  background: linear-gradient(95deg, var(--dark-color), var(--lt-color));
+  border: 0;
+  border-radius: 5px;
+  padding: 12px 20px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "League Spartan Bold", sans-serif;
+}
+
+img {
+  filter: var(--svg-toggle);
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
