@@ -2,12 +2,14 @@
 :root {
   --primary-toggle: #1c1d25;
   --secondary-toggle: #b0b2c3;
+  --svg-toggle: invert(87%) sepia(9%) saturate(379%) hue-rotate(196deg)
+    brightness(82%) contrast(89%);
   --hover-toggle: #ffffff;
   --txt-toggle: #ffffff;
   --txt-color: #ffffff;
   --dark-color: #2e5c49;
-  --med-color: #6edbae;
-  --lt-color: #54a885;
+  --med-color: #54a885;
+  --lt-color: #6edbae;
   --bg-color: #f3f3f3;
   --footer-color: #1c1d25;
 }
