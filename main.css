@@ -88,3 +88,34 @@ ul {
   margin: 0;
   padding: 0;
 }
+
+/* nav */
+.nav-toggle__menu {
+  display: block;
+  width: 42px;
+  height: 42px;
+}
+
+.nav-toggle__bar {
+  background-color: var(--secondary-toggle);
+  border-radius: 5px;
+  display: block;
+  height: 3px;
+  margin-bottom: 6px;
+  width: 100%;
+}
+
+.nav-toggle__bar--mid {
+  margin-left: 15%;
+  width: 85%;
+}
+
+.nav-toggle__bar--btm {
+  margin-left: 40%;
+  width: 60%;
+}
+
+/* toggles */
+.--hidden {
+  display: none;
+}
