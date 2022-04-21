@@ -13,3 +13,29 @@
   --bg-color: #f3f3f3;
   --footer-color: #1c1d25;
 }
+
+/* fonts */
+@font-face {
+  font-family: "League Spartan Bold";
+  src: url(fonts/LeagueSpartan-Bold.ttf);
+}
+
+@font-face {
+  font-family: "League Spartan Regular";
+  src: url(fonts/LeagueSpartan-Regular.ttf);
+}
+
+@font-face {
+  font-family: "League Spartan Semi-Bold";
+  src: url(fonts/LeagueSpartan-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: "Libre Baskerville Bold";
+  src: url(fonts/LibreBaskerville-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Libre Baskerville Regular";
+  src: url(fonts/LibreBaskerville-Regular.ttf);
+}
