@@ -55,16 +55,18 @@ function startWebsiteFunctionality() {
 function generateProjectsMarkup() {
     let cardNum = 0;
     const markup = projects.map(project => {
-        return `<div class="card">
+        return `<div class="card ${getClassForCard(++cardNum)}">
+        <p class="card__number ${getClassForCard(cardNum)}">0${cardNum}</p>
         <h3 class="card__title">${project.title}</h1>
-        <p class="card__number">0${++cardNum}</p>
         <img src="${project.img}" alt="demo image of ${project.title}" class="card__img">
         <p class="card__desc">${project.desc}</p>
         <ul class="techs">
         ${generateTechsMarkup(project.tech)}</ul>
-        <button type="button" class="card__btn"><a href="${project.demo}" class="card__link">Demo<img src="images/icons/external-link.svg" class="card__icon" alt="external link icon"></a></button>
-        <button type="button" class="card__btn"><a href="${project.link}" class="card__link">GitHub<img src="images/icons/external-link.svg" class="card__icon" alt="external link icon"></a></button>
-    </div>
+        <div class="external">
+            <button type="button" class="external__btn"><a href="${project.demo}" class="external__link">Demo<img src="images/icons/external-link.svg" class="external__icon" alt="external link icon"></a></button>
+            <button type="button" class="external__btn"><a href="${project.link}" class="external__link">GitHub<img src="images/icons/external-link.svg" class="external__icon" alt="external link icon"></a></button>
+        </div>
+        </div>
     `
     })
     return markup.join("");
@@ -80,6 +82,10 @@ function generateTechsMarkup(techList) {
 
 function setHTMLOfElement(element, markup) {
     element.innerHTML = markup;
+}
+
+function getClassForCard(number) {
+    return (number % 2 === 0) ? `--even` : ``;
 }
 
 // event listner
