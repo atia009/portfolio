@@ -89,6 +89,44 @@ ul {
   padding: 0;
 }
 
+/* layout */
+#header {
+  background-color: var(--primary-toggle);
+  display: flex;
+  justify-content: space-between;
+  padding: 5%;
+  position: absolute;
+  width: 100%;
+}
+
+#home {
+  background-color: var(--primary-toggle);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100vh;
+}
+
+.intro {
+  margin: auto;
+}
+
+#about {
+  background-color: var(--primary-toggle);
+  padding: 5%;
+}
+
+.about__body {
+  text-align: left;
+}
+
+.tech {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 7.5px;
+}
+
 /* nav */
 .nav-toggle__menu {
   display: block;
