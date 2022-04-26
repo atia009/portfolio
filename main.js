@@ -63,8 +63,8 @@ function generateProjectsMarkup() {
         <ul class="techs">
         ${generateTechsMarkup(project.tech)}</ul>
         <div class="external">
-            <button type="button" class="external__btn"><a href="${project.demo}" class="external__link">Demo<img src="images/icons/external-link.svg" class="external__icon" alt="external link icon"></a></button>
-            <button type="button" class="external__btn"><a href="${project.link}" class="external__link">GitHub<img src="images/icons/external-link.svg" class="external__icon" alt="external link icon"></a></button>
+            <button type="button" class="external__btn"><a href="${project.demo}" class="external__link">Demo<img src="images/icons/external-link.svg" class="external__icon" alt="external link icon"></a></button><!--
+         --><button type="button" class="external__btn"><a href="${project.link}" class="external__link">GitHub<img src="images/icons/external-link.svg" class="external__icon" alt="external link icon"></a></button>
         </div>
         </div>
     `
