@@ -6,6 +6,8 @@
     brightness(82%) contrast(89%);
   --hover-toggle: #ffffff;
   --txt-toggle: #ffffff;
+  --svg-filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(70deg)
+    brightness(102%) contrast(102%);
   --txt-color: #ffffff;
   --dark-color: #2e5c49;
   --med-color: #54a885;
@@ -117,6 +119,14 @@ ul {
 
 .intro {
   margin: auto;
+}
+
+.intro__title {
+  margin: 0 0 0.2em;
+}
+
+.intro__desc {
+  margin: 0 0 25px;
 }
 
 #about {
