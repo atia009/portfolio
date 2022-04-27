@@ -82,6 +82,37 @@ body {
 
 #projects {
   padding: 80px 0;
+  position: relative;
+}
+
+.projects__mask,
+.projects__mask::after {
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.projects__mask {
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.projects__mask::after {
+  background: linear-gradient(
+    to right,
+    #1c1d1f0f 0,
+    #1c1d1f0f 1px,
+    transparent 2px,
+    transparent calc(100% - 2px),
+    #1c1d1f0f calc(100% - 1px),
+    #1c1d1f0f 100%
+  );
+  content: "";
+  left: 50%;
+  max-width: 920px;
+  transform: translate3d(-50%, 0, 0);
+  width: 65%;
 }
 
 .cards {
@@ -150,13 +181,22 @@ body {
    TERTIARY LAYOUT
    =============== */
 
-#about {
+#home {
   background-color: var(--primary-toggle);
-  padding: 80px 5%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100vh;
 }
 
 .intro {
   margin: auto;
+}
+
+#about {
+  background-color: var(--primary-toggle);
+  padding: 80px 5%;
 }
 
 /* ===============
