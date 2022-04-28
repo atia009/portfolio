@@ -56,15 +56,17 @@ function generateProjectsMarkup() {
     let cardNum = 0;
     const markup = projects.map(project => {
         return `<div class="card ${getClassForCard(++cardNum)}">
-        <p class="card__number ${getClassForCard(cardNum)}">0${cardNum}</p>
+        <p class="card__number">0${cardNum}</p>
+        <a href="${project.demo}" class="card__link" target="__blank"><img src="${project.img}" alt="demo image of ${project.title}" class="card__img"><a>
         <h3 class="card__title">${project.title}</h1>
-        <img src="${project.img}" alt="demo image of ${project.title}" class="card__img">
-        <p class="card__desc">${project.desc}</p>
-        <ul class="techs">
-        ${generateTechsMarkup(project.tech)}</ul>
-        <div class="external">
-            <button type="button" class="external__btn"><a href="${project.demo}" class="external__link">Demo<img src="images/icons/external-link.svg" class="external__icon" alt="external link icon"></a></button><!--
-         --><button type="button" class="external__btn"><a href="${project.link}" class="external__link">GitHub<img src="images/icons/external-link.svg" class="external__icon" alt="external link icon"></a></button>
+        <div class="info">
+            <p class="info__desc">${project.desc}</p>
+            <ul class="tech">
+            ${generateTechsMarkup(project.tech)}</ul>
+            <div class="external">
+                <button type="button" class="external__btn"><a href="${project.demo}" target="__blank" class="external__link">Demo<img src="images/icons/external-link.svg" class="external__icon" alt="external link icon"></a></button><!--
+            --><button type="button" class="external__btn"><a href="${project.link}" target="__blank" class="external__link">GitHub<img src="images/icons/external-link.svg" class="external__icon" alt="external link icon"></a></button>
+            </div>
         </div>
         </div>
     `
@@ -74,7 +76,7 @@ function generateProjectsMarkup() {
 
 function generateTechsMarkup(techList) {
     const markup = techList.map(tech => {
-        return `<li class="tech">${tech}</li>
+        return `<li class="tech__item">${tech}</li>
         `
     })
     return markup.join("");
