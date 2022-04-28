@@ -38,6 +38,7 @@
 
 html {
   box-sizing: border-box;
+  font-size: 16px;
 }
 
 *,
@@ -225,7 +226,7 @@ body {
 
 a {
   color: var(--txt-color);
-  font-family: "League Spartan Semi-Bold", sans-serif;
+  font-family: "League Spartan Bold", sans-serif;
   font-size: 1rem;
   text-decoration: none;
 }
@@ -236,68 +237,111 @@ h3 {
   font-family: "League Spartan Bold", sans-serif;
 }
 
+p {
+  font-family: "Libre Baskerville Regular", serif;
+}
+
 ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
+.intro__title,
+.intro__subtitle,
+.about__title,
+.desc__body,
+.desc__tech,
+.skills {
+  color: var(--txt-toggle);
+}
+
 .intro__title {
+  font-size: 2rem;
   margin: 0 0 0.2em;
 }
 
-.intro__desc {
+.intro__subtitle {
+  font-size: 1rem;
   margin: 0 0 25px;
-}
-
-.about__body {
-  margin: 0;
-  text-align: left;
-}
-
-.about__tech {
-  margin: 10px 0;
-  text-align: left;
-}
-
-.tech {
-  display: flex;
-  flex-flow: row wrap;
-  gap: 7.5px;
-}
-
-.about__desc,
-.projects__desc {
-  margin: 0;
 }
 
 .about__title,
 .projects__title {
+  font-size: 1.375rem;
   margin: 25px 0px 70px;
+}
+
+.about__subtitle,
+.projects__subtitle {
+  color: var(--dark-color);
+  font-size: 0.75rem;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.desc__body,
+.desc__tech,
+.info__desc {
+  font-size: 0.75rem;
+}
+
+.desc__body {
+  margin: 0;
+  text-align: left;
+}
+
+.desc__tech {
+  margin: 10px 0;
+  text-align: left;
+}
+
+.skills {
+  display: flex;
+  flex-flow: row wrap;
+  font-size: 0.5rem;
+  gap: 7.5px;
+}
+
+.projects__title {
+  color: var(--footer-color);
+}
+
+.card__number,
+.card__title,
+.info,
+.techs {
+  color: var(--txt-color);
 }
 
 .card__number {
   align-self: flex-start;
+  font-size: 1.375rem;
 }
 
 .card__title {
+  font-size: 1.375rem;
   margin: 0;
 }
 
 .techs {
   display: flex;
+  font-size: 0.5rem;
   gap: 7.5px;
   margin-bottom: 20px;
 }
 
 .media {
   display: flex;
+  font-size: 1rem;
   gap: 60px;
   justify-content: center;
   margin: 30px 0;
 }
 
 .footer__copyright {
+  color: var(--txt-color);
+  font-size: 0.75rem;
   margin: 0;
 }
 
