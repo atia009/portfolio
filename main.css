@@ -447,6 +447,10 @@ button {
   display: none;
 }
 
+.--overflow {
+  overflow: hidden;
+}
+
 /* ===============
    SALIENT FEATURES
    =============== */

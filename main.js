@@ -100,12 +100,14 @@ function startNavFunctionality() {
 
 function updateMobileNavVisibility() {
     const mobile = document.querySelector(`.mobile-nav`);
+    const body = document.querySelector(`body`);
     if (this.classList.contains(`mobile-toggle`)) {
         mobile.classList.remove(`--hidden`);
+        body.classList.add(`--overflow`);
     } else {
         mobile.classList.add(`--hidden`);
+        body.classList.remove(`--overflow`);
     }
-    
 }
 
 // event listner
