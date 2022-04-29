@@ -16,33 +16,50 @@
         <button class="color-mode" type="button"><img src="images/icons/circle-half-full.svg" class="color-mode__img" alt="light/dark mode icon"></button>
    
         <!-- nav -->
-        <div class="nav-toggle">
-            <span class="nav-toggle__menu">
-                <i class="nav-toggle__bar nav-toggle__bar--top"></i>
-                <i class="nav-toggle__bar nav-toggle__bar--mid"></i>
-                <i class="nav-toggle__bar nav-toggle__bar--btm"></i>
-            </span>
-        </div>
-        <nav class="navbar --hidden">
-            <ul class="nav">
-                <li class="nav__item"><a href="#Home" class="nav__link">Home</a></li>
-                <li class="nav__item"><a href="#About" class="nav__link">About</a></li>
-                <li class="nav__item"><a href="#Projects" class="nav__link">Projects</a></li>
+        <nav class="nav">
+            <div class="mobile-toggle">
+                <span class="nav-enter">
+                    <i class="nav-enter__bar nav-enter__bar--top"></i>
+                    <i class="nav-enter__bar nav-enter__bar--mid"></i>
+                    <i class="nav-enter__bar nav-enter__bar--btm"></i>
+                </span>
+            </div>
+            <ul class="links --hidden">
+                <li class="links__item"><a href="#Home" class="links__link">Home</a></li>
+                <li class="links__item"><a href="#About" class="links__link">About</a></li>
+                <li class="links__item"><a href="#Projects" class="links__link">Projects</a></li>
+            </ul>
+            <ul class="social --hidden">
+                    <li class="social__item"><a href="mailto: aarontia09@gmail.com" target="__blank" class="social__link"><img src="images/icons/email.svg" class="social__img" alt="email icon"></a></li>
+                    <li class="social__item"><a href="https://github.com/atia009" target="__blank" class="social__link"><img src="images/icons/github.svg" class="social__img" alt="github icon"></a></li>
+                    <li class="social__item"><a href="https://www.linkedin.com/in/aaron-joshua-tia/" target="__blank" class="social__link"><img src="images/icons/linkedin.svg" class="social__img" alt="linkedin icon"></a></li>
             </ul>
         </nav>
 
-        <ul class="social --hidden">
-            <li class="social__item"><a href="mailto: aarontia09@gmail.com" target="__blank" class="social__link"><img src="images/icons/email.svg" class="social__img" alt="email icon"></a></li>
-            <li class="social__item"><a href="https://github.com/atia009" target="__blank" class="social__link"><img src="images/icons/github.svg" class="social__img" alt="github icon"></a></li>
-            <li class="social__item"><a href="https://www.linkedin.com/in/aaron-joshua-tia/" target="__blank" class="social__link"><img src="images/icons/linkedin.svg" class="social__img" alt="linkedin icon"></a></li>
-        </ul>
+        <nav class="mobile-nav --hidden">
+            <span class="nav-exit">
+                <i class="nav-exit__bar nav-exit__bar--left"></i>
+                <i class="nav-exit__bar nav-exit__bar--right"></i>
+            </span>
+            <ul class="mobile-links">
+                <li class="mobile-links__item"><a href="#Home" class="mobile-links__link">Home</a></li>
+                <li class="mobile-links__item"><a href="#About" class="mobile-links__link">About</a></li>
+                <li class="mobile-links__item"><a href="#Projects" class="mobile-links__link">Projects</a></li>
+            </ul>
+            <ul class="mobile-social">
+                <li class="mobile-social__item"><a href="mailto: aarontia09@gmail.com" target="__blank" class="mobile-social__link"><img src="images/icons/email.svg" class="mobile-social__img" alt="email icon"></a></li>
+                <li class="mobile-social__item"><a href="https://github.com/atia009" target="__blank" class="mobile-social__link"><img src="images/icons/github.svg" class="mobile-social__img" alt="github icon"></a></li>
+                <li class="mobile-social__item"><a href="https://www.linkedin.com/in/aaron-joshua-tia/" target="__blank" class="mobile-social__link"><img src="images/icons/linkedin.svg" class="mobile-social__img" alt="linkedin icon"></a></li>
+            </ul>
+        </nav>
+        
     </header>
 
     <!-- home -->
     <section id="home">
         <div class="intro">
             <h1 class="intro__title">Aaron Tia</h1>
-            <p class="intro__desc">Front-end Developer</p>
+            <p class="intro__subtitle">Front-end Developer</p>
             <button type="button" class="intro__btn"><a href="#projects" class="intro__link">Projects</a></button><!--
          --><button type="button" class="intro__btn"><a href="#" target="__blank" class="intro__link">Resume<img src="images/icons/external-link.svg" class="intro__img" alt="external link icon"></a></button>
         </div>
@@ -51,24 +68,26 @@
 
     <!-- about -->
     <section id="about">
-        <p class="about__desc">Read</p>
+        <p class="about__subtitle">Read</p>
         <h2 class="about__title">About Me</h2>
-        <p class="about__body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur asperiores maxime ea ratione deserunt temporibus doloribus eveniet! Nihil vel amet quia. Libero cum recusandae laudantium aspernatur, perspiciatis voluptas inventore praesentium ipsa soluta! Magnam iure eligendi at architecto voluptate! Error, nam.</b></p>
-        <p class="about__tech">Recent technologies:</p>
-        <ul class="tech">
-            <li class="tech__item">HTML5</li>
-            <li class="tech__item">CSS3</li>
-            <li class="tech__item">JavaScript(ES6+)</li>
-            <li class="tech__item">Bootstrap</li>
-            <li class="tech__item">Git</li>
-            <li class="tech__item">Figma</li>
+        <div class="desc">
+            <p class="desc__body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur asperiores maxime ea ratione deserunt temporibus doloribus eveniet! Nihil vel amet quia. Libero cum recusandae laudantium aspernatur, perspiciatis voluptas inventore praesentium ipsa soluta! Magnam iure eligendi at architecto voluptate! Error, nam.</b></p>
+            <p class="desc__tech">Recent technologies:</p>
+        </div>
+        <ul class="skills">
+            <li class="skills__item">HTML5</li>
+            <li class="skills__item">CSS3</li>
+            <li class="skills__item">JavaScript(ES6+)</li>
+            <li class="skills__item">Bootstrap</li>
+            <li class="skills__item">Git</li>
+            <li class="skills__item">Figma</li>
         </ul>
     </section>
 
     <!-- projects -->
     <main id="projects">
         <div class="projects__mask"></div>
-        <p class="projects__desc">Featured</p>
+        <p class="projects__subtitle">Featured</p>
         <h2 class="projects__title">Projects</h2>
         <section class="cards"></section>
     </main>
