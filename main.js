@@ -50,6 +50,7 @@ projects.push(project3);
 // functions
 function startWebsiteFunctionality() {
     setHTMLOfElement(document.querySelector(`.cards`), generateProjectsMarkup());
+    startNavFunctionality();
 }
 
 function generateProjectsMarkup() {
@@ -88,6 +89,23 @@ function setHTMLOfElement(element, markup) {
 
 function getClassForCard(number) {
     return (number % 2 === 0) ? `--even` : ``;
+}
+
+function startNavFunctionality() {
+    const navEnter = document.querySelector(`.mobile-toggle`);
+    const navExit = document.querySelector(`.nav-exit`);
+    navEnter.addEventListener(`click`, updateMobileNavVisibility);
+    navExit.addEventListener(`click`, updateMobileNavVisibility);
+}
+
+function updateMobileNavVisibility() {
+    const mobile = document.querySelector(`.mobile-nav`);
+    if (this.classList.contains(`mobile-toggle`)) {
+        mobile.classList.remove(`--hidden`);
+    } else {
+        mobile.classList.add(`--hidden`);
+    }
+    
 }
 
 // event listner
