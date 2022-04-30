@@ -188,19 +188,21 @@ body {
   margin-left: auto;
   height: 42px;
   width: 42px;
+  position: relative;
 }
 
 .nav-exit__bar {
   height: 4px;
+  position: absolute;
 }
 
 .nav-exit__bar--left {
   transform: rotate(-45deg);
+  top: 50%;
 }
 .nav-exit__bar--right {
   transform: rotate(45deg);
-  position: relative;
-  top: -3px;
+  top: calc(50% + 1px);
 }
 
 .mobile-nav {
