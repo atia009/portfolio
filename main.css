@@ -436,6 +436,26 @@ button {
   padding: 0;
 }
 
+.intro__btn {
+  position: relative;
+  vertical-align: top;
+}
+
+.intro__btn:nth-of-type(2) {
+  margin-left: 20px;
+}
+
+.intro__img,
+.external__icon {
+  filter: var(--svg-filter);
+  height: 15px;
+  opacity: 40%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-48%);
+  width: 15px;
+}
+
 /* ===============
    GENERAL CLASSES
    =============== */
