@@ -101,14 +101,26 @@ function startNavFunctionality() {
 function updateMobileNavVisibility() {
     const mobile = document.querySelector(`.mobile-nav`);
     const body = document.querySelector(`body`);
-    if (this.classList.contains(`mobile-toggle`)) {
-        mobile.classList.remove(`--hidden`);
-        body.classList.add(`--overflow`);
+    updateClassVisibility(mobile, `--hidden`);
+    updateClassVisibility(body, `--overflow`);
+}
+
+function updateClassVisibility(element, classToUpdate) {
+    if (element.classList.contains(classToUpdate)) {
+        removeClassFromElement(element, classToUpdate);
     } else {
-        mobile.classList.add(`--hidden`);
-        body.classList.remove(`--overflow`);
+        addClassToElement(element, classToUpdate);
     }
 }
+
+function addClassToElement(element, className) {
+    element.classList.add(className);
+}
+
+function removeClassFromElement(element, className) {
+    element.classList.remove(className);
+}
+
 
 // event listner
 window.addEventListener("DOMContentLoaded", startWebsiteFunctionality);
