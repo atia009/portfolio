@@ -51,6 +51,7 @@ projects.push(project3);
 function startWebsiteFunctionality() {
     setHTMLOfElement(document.querySelector(`.cards`), generateProjectsMarkup());
     startNavFunctionality();
+    startColorModeFunctionality();
 }
 
 function generateProjectsMarkup() {
@@ -94,8 +95,11 @@ function getClassForCard(number) {
 function startNavFunctionality() {
     const navEnter = document.querySelector(`.mobile-toggle`);
     const navExit = document.querySelector(`.nav-exit`);
+    const links = document.querySelectorAll(`.mobile-links__item`);
+    
     navEnter.addEventListener(`click`, updateMobileNavVisibility);
     navExit.addEventListener(`click`, updateMobileNavVisibility);
+    links.forEach(link => link.addEventListener(`click`, updateMobileNavVisibility));
 }
 
 function updateMobileNavVisibility() {
@@ -113,12 +117,41 @@ function updateClassVisibility(element, classToUpdate) {
     }
 }
 
+function startColorModeFunctionality() {
+    const color = document.querySelector(`.color-mode`);
+    color.addEventListener('click', updateColorMode);
+}
+
+function updateColorMode() {
+    updateRootVariable(`--primary-toggle`, `#1c1d25`, `#ebebeb`);
+    updateRootVariable(`--secondary-toggle`, `#b0b2c3`, `#4c4f65`);
+    updateRootVariable(`--svg-toggle`, `invert(87%) sepia(9%) saturate(379%) hue-rotate(196deg)
+    brightness(82%) contrast(89%)`, `invert(28%) sepia(9%) saturate(1237%) hue-rotate(195deg) brightness(99%) contrast(88%)`);
+    updateRootVariable(`--txt-toggle`, `#ffffff`, `#4c4f65`);
+}
+
 function addClassToElement(element, className) {
     element.classList.add(className);
 }
 
 function removeClassFromElement(element, className) {
     element.classList.remove(className);
+}
+
+function updateRootVariable(name, value1, value2) {
+    if ((getRootVariableValue(name) === undefined) || (getRootVariableValue(name) === value1)) {
+        setRootVariableValue(name, value2);
+    } else {
+        setRootVariableValue(name, value1);
+    }
+}
+
+function getRootVariableValue(name) {
+    return document.documentElement.style.getPropertyValue(name);
+}
+
+function setRootVariableValue(name, value) {
+    document.documentElement.style.setProperty(name, value);
 }
 
 
