@@ -22,7 +22,7 @@ Project.prototype = {
 
 // objects
 const project1 = new Project(`Essential Aesthetics`, `01-project.png`, `https://essentialaesthetics.netlify.app`, `https://github.com/atia009/essential-aesthetics`);
-project1.addDesc(`Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam amet molestiae at dicta architecto sit enim inventore repellat tempora eaque`);
+project1.addDesc(`Dermatology website with search and sort functionality for product navigation.`);
 project1.addTech(`HTML5`);
 project1.addTech(`CSS3`);
 project1.addTech(`JavaScript`);
@@ -30,7 +30,7 @@ project1.addTech(`JavaScript`);
 projects.push(project1);
 
 const project2 = new Project(`Protagonist`, `01-project.png`, `https://protagonistco.netlify.app`, `https://github.com/atia009/protagonist`);
-project2.addDesc(`Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam amet molestiae at dicta architecto sit enim inventore repellat tempora eaque`);
+project2.addDesc(`E-commerce webpage showcasing responsive layouts with BootStrap.`);
 project2.addTech(`HTML5`);
 project2.addTech(`CSS3`);
 project2.addTech(`JavaScript`);
@@ -39,7 +39,7 @@ project2.addTech(`Bootstrap`);
 projects.push(project2);
 
 const project3 = new Project(`Disflex`, `01-project.png`, `https://disflex.netlify.app`, `https://github.com/atia009/disflex`);
-project3.addDesc(`Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam amet molestiae at dicta architecto sit enim inventore repellat tempora eaque`);
+project3.addDesc(`Flexbox simulator including css snippet and ui controls. `);
 project3.addTech(`HTML5`);
 project3.addTech(`CSS3`);
 project3.addTech(`JavaScript`);
@@ -59,10 +59,10 @@ function startWebsiteFunctionality() {
 function generateProjectsMarkup() {
     let cardNum = 0;
     const markup = projects.map(project => {
-        return `<li class="card ${getClassForCard(++cardNum)}">
+        return `<li class="card">
             <div class="card__bg" style="background-image: url(${project.img});">
-                <p class="card__number">0${cardNum}</p>
-                <div class="info">
+                <div class="info info${getClassForCard(++cardNum)}">
+                    <p class="info__number info__number${getClassForCard(cardNum)}">0${cardNum}</p>
                     <h3 class="info__title">${project.title}</h3>
                     <p class="info__desc">${project.desc}</p>
                     <ul class="tech">
@@ -93,7 +93,7 @@ function setHTMLOfElement(element, markup) {
 }
 
 function getClassForCard(number) {
-    return (number % 2 === 0) ? `--even` : ``;
+    return (number % 2 === 0) ? `--even` : `--odd`;
 }
 
 function startNavFunctionality() {
