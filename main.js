@@ -54,27 +54,31 @@ function startWebsiteFunctionality() {
     startColorModeFunctionality();
 }
 
+
+// make a tag be container, have info in a tag, using inline style and make a tage have bg image
 function generateProjectsMarkup() {
     let cardNum = 0;
     const markup = projects.map(project => {
-        return `<div class="card ${getClassForCard(++cardNum)}">
-        <p class="card__number">0${cardNum}</p>
-        <a href="${project.demo}" class="card__link" target="__blank"><img src="${project.img}" alt="demo image of ${project.title}" class="card__img"><a>
-        <h3 class="card__title">${project.title}</h1>
-        <div class="info">
-            <p class="info__desc">${project.desc}</p>
-            <ul class="tech">
-            ${generateTechsMarkup(project.tech)}</ul>
-            <div class="external">
-                <button type="button" class="external__btn"><a href="${project.demo}" target="__blank" class="external__link">Demo<img src="images/icons/external-link.svg" class="external__icon" alt="external link icon"></a></button><!--
-            --><button type="button" class="external__btn"><a href="${project.link}" target="__blank" class="external__link">GitHub<img src="images/icons/external-link.svg" class="external__icon" alt="external link icon"></a></button>
+        return `<li class="card ${getClassForCard(++cardNum)}">
+            <div class="card__bg" style="background-image: url(${project.img});">
+                <p class="card__number">0${cardNum}</p>
+                <div class="info">
+                    <h3 class="info__title">${project.title}</h3>
+                    <p class="info__desc">${project.desc}</p>
+                    <ul class="tech">
+                    ${generateTechsMarkup(project.tech)}</ul>
+                    <div class="external">
+                        <button type="button" class="external__btn"><a href="${project.demo}" target="__blank" class="external__link">Demo<img src="images/icons/external-link.svg" class="external__icon" alt="external link icon"></a></button><!--
+                        --><button type="button" class="external__btn"><a href="${project.link}" target="__blank" class="external__link">GitHub<img src="images/icons/external-link.svg" class="external__icon" alt="external link icon"></a></button>
+                    </div>
+                </div>
             </div>
-        </div>
-        </div>
+        </li>
     `
     })
     return markup.join("");
 }
+
 
 function generateTechsMarkup(techList) {
     const markup = techList.map(tech => {
