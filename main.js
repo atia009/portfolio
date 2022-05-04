@@ -61,8 +61,8 @@ function generateProjectsMarkup() {
     const markup = projects.map(project => {
         return `<li class="card">
             <div class="card__bg" style="background-image: url(${project.img});">
-                <div class="info info${getClassForCard(++cardNum)}">
-                    <p class="info__number info__number${getClassForCard(cardNum)}">0${cardNum}</p>
+            <p class="card__number card__number${getClassForCard(++cardNum)}">0${cardNum}</p>
+                <div class="info info${getClassForCard(cardNum)}">
                     <h3 class="info__title">${project.title}</h3>
                     <p class="info__desc">${project.desc}</p>
                     <ul class="tech">
