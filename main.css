@@ -84,6 +84,8 @@ body {
 #projects {
   padding: 80px 0;
   position: relative;
+  margin: 0 auto;
+  width: 95%;
 }
 
 .projects__mask,
@@ -124,15 +126,55 @@ body {
 }
 
 .card {
-  align-items: flex-start;
+  box-shadow: 0 20px 80px 0 rgba(0, 0, 0, 0.45);
+  height: 290px;
+  position: relative;
+  width: 95%;
+}
+
+.card__bg {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card__bg::before {
+  background: var(--footer-color);
+  content: " ";
+  display: block;
+  left: 0;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+}
+
+.info {
+  bottom: 50px;
   display: flex;
   flex-flow: column nowrap;
-  height: 290px;
-  justify-content: center;
-  padding: 5%;
-  position: relative;
+  height: 100%;
+  justify-content: flex-start;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+}
+
+.info--even {
+  align-items: flex-end;
+  left: auto;
+  right: 25px;
+  text-align: right;
+}
+
+.info--odd {
+  align-items: flex-start;
+  left: 25px;
+  right: auto;
   text-align: left;
-  width: 95%;
+}
+
+.external {
+  margin-bottom: auto;
 }
 
 /* ===============
@@ -218,8 +260,6 @@ body {
   width: 100vw;
   z-index: 9;
 }
-
-/* use js to add overflow hidden on body when mobile nav is active */
 
 #footer {
   background-color: var(--footer-color);
@@ -380,28 +420,49 @@ ul {
   color: var(--footer-color);
 }
 
+.card__bg,
+.card__bg::before {
+  border-radius: 5px;
+  height: 100%;
+  width: 100%;
+}
+
 .card__number,
-.card__title,
-.info,
-.techs {
+.info__desc,
+.info__title,
+.tech__item {
   color: var(--txt-color);
 }
 
-.card__number {
-  align-self: flex-start;
-  font-size: 1.375rem;
+.info__desc {
+  width: min(40ch, 100% - 2rem);
 }
 
-.card__title {
+.card__number {
+  font-family: "League Spartan Bold", sans-serif;
   font-size: 1.375rem;
-  margin: 0;
+  position: absolute;
+  top: 10px;
+}
+
+.card__number--even {
+  left: 10px;
+}
+
+.card__number--odd {
+  right: 10px;
+}
+
+.info__title {
+  font-size: 1.375rem;
+  margin: auto 0 0.2em;
 }
 
 .tech {
   display: flex;
   font-size: 0.5rem;
   gap: 7.5px;
-  margin-bottom: 20px;
+  margin: 5px 0 20px 0;
 }
 
 .media {
@@ -436,34 +497,20 @@ button {
   padding: 0;
 }
 
-.intro__btn {
+.intro__btn,
+.external__btn {
   position: relative;
   vertical-align: top;
 }
 
-.intro__btn:nth-of-type(2) {
+.intro__btn:nth-of-type(2),
+.external__btn:nth-of-type(2) {
   margin-left: 20px;
-}
-
-.intro__img,
-.external__icon {
-  filter: var(--svg-filter);
-  height: 15px;
-  opacity: 40%;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-48%);
-  width: 15px;
 }
 
 /* ===============
    GENERAL CLASSES
    =============== */
-
-.--even {
-  align-items: flex-end;
-  text-align: right;
-}
 
 .--hidden {
   display: none;
@@ -481,13 +528,15 @@ img {
   filter: var(--svg-toggle);
 }
 
-.card__img {
+.intro__img,
+.external__icon {
+  filter: var(--svg-filter);
+  height: 15px;
+  opacity: 40%;
   position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  z-index: -1;
+  top: 50%;
+  transform: translateY(-48%);
+  width: 15px;
 }
 
 /* ===============
