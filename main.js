@@ -20,31 +20,33 @@ Project.prototype = {
     }
 }
 
+// images are 1872 x 960
 // objects
-const project1 = new Project(`Essential Aesthetics`, `01-project.png`, `https://essentialaesthetics.netlify.app`, `https://github.com/atia009/essential-aesthetics`);
-project1.addDesc(`Dermatology website with search and sort functionality for product navigation.`);
+const project1 = new Project(`Essential Aesthetics`, `images/01-project.png`, `https://essentialaesthetics.netlify.app`, `https://github.com/atia009/essential-aesthetics`);
+project1.addDesc(`Dermatology website with search and sort options for product navigation.`);
 project1.addTech(`HTML5`);
 project1.addTech(`CSS3`);
 project1.addTech(`JavaScript`);
 
 projects.push(project1);
 
-const project2 = new Project(`Protagonist`, `01-project.png`, `https://protagonistco.netlify.app`, `https://github.com/atia009/protagonist`);
-project2.addDesc(`E-commerce webpage showcasing responsive layouts with BootStrap.`);
+const project2 = new Project(`Disflex`, `images/02-project.png`, `https://disflex.netlify.app`, `https://github.com/atia009/disflex`);
+project2.addDesc(`Flexbox simulator that includes ui controls and css snippets. `);
 project2.addTech(`HTML5`);
 project2.addTech(`CSS3`);
 project2.addTech(`JavaScript`);
-project2.addTech(`Bootstrap`);
 
 projects.push(project2);
 
-const project3 = new Project(`Disflex`, `01-project.png`, `https://disflex.netlify.app`, `https://github.com/atia009/disflex`);
-project3.addDesc(`Flexbox simulator including css snippet and ui controls. `);
+const project3 = new Project(`Protagonist`, `images/03-project.png`, `https://protagonistco.netlify.app`, `https://github.com/atia009/protagonist`);
+project3.addDesc(`E-commerce webpage showcasing responsive layouts with BootStrap.`);
 project3.addTech(`HTML5`);
 project3.addTech(`CSS3`);
 project3.addTech(`JavaScript`);
+project3.addTech(`Bootstrap`);
 
 projects.push(project3);
+
 
 
 // functions
@@ -54,8 +56,6 @@ function startWebsiteFunctionality() {
     startColorModeFunctionality();
 }
 
-
-// make a tag be container, have info in a tag, using inline style and make a tage have bg image
 function generateProjectsMarkup() {
     let cardNum = 0;
     const markup = projects.map(project => {
@@ -69,7 +69,7 @@ function generateProjectsMarkup() {
                     ${generateTechsMarkup(project.tech)}</ul>
                     <div class="external">
                         <button type="button" class="external__btn"><a href="${project.demo}" target="__blank" class="external__link">Demo<img src="images/icons/external-link.svg" class="external__icon" alt="external link icon"></a></button><!--
-                        --><button type="button" class="external__btn"><a href="${project.link}" target="__blank" class="external__link">GitHub<img src="images/icons/external-link.svg" class="external__icon" alt="external link icon"></a></button>
+                        --><button type="button" class="external__btn"><a href="${project.github}" target="__blank" class="external__link">GitHub<img src="images/icons/external-link.svg" class="external__icon" alt="external link icon"></a></button>
                     </div>
                 </div>
             </div>
