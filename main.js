@@ -1,5 +1,6 @@
 // globals
 const projects = [];
+let typedCount = 0;
 
 // constructor
 function Project(title, img, demo, github) {
@@ -46,8 +47,6 @@ project3.addTech(`JavaScript`);
 project3.addTech(`Bootstrap`);
 
 projects.push(project3);
-
-
 
 // functions
 function startWebsiteFunctionality() {
@@ -158,6 +157,21 @@ function setRootVariableValue(name, value) {
     document.documentElement.style.setProperty(name, value);
 }
 
+function startTypedEffect() {
+    const subtitle = `Front-end Developer`;
+    let lettersToType = subtitle.slice(0, typedCount);
+    const intro = document.querySelector(`.intro__subtitle`);
+    intro.textContent = lettersToType;
+    if (lettersToType.length != intro.length) {
+        setTimeout(() => {
+            typedCount++;
+            startTypedEffect();
+        }, 100);
+    } 
+}
 
-// event listner
+
+
+// asynchrounous calls
 window.addEventListener("DOMContentLoaded", startWebsiteFunctionality);
+setTimeout(startTypedEffect, 1000);
