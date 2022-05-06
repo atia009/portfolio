@@ -74,6 +74,18 @@ img {
   -webkit-user-drag: element;
 }
 
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 /* ===============
    PRIMARY LAYOUT
    =============== */
@@ -382,6 +394,16 @@ ul {
 .intro__subtitle {
   font-size: 1rem;
   margin: 0 0 25px;
+}
+
+.intro__subtitle::after {
+  /* opacity: 1; */
+  content: "";
+  width: 1px;
+  /* transform: translateY(5px); */
+  height: 1rem;
+  border-left: 1px solid var(--txt-toggle);
+  animation: blink 0.8s infinite alternate step-end;
 }
 
 .about__title,
