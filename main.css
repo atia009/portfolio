@@ -23,6 +23,8 @@
   --txt-toggle: #ffffff;
   --svg-filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(70deg)
     brightness(102%) contrast(102%);
+  --svg-footer: invert(87%) sepia(9%) saturate(379%) hue-rotate(196deg)
+    brightness(82%) contrast(89%);
   --txt-color: #ffffff;
   --dark-color: #2e5c49;
   --med-color: #54a885;
@@ -326,6 +328,12 @@ p {
   font-family: "Libre Baskerville Regular", serif;
 }
 
+strong {
+  color: var(--lt-color);
+  font-family: "Libre Baskerville Regular", serif;
+  font-weight: 700;
+}
+
 ul {
   list-style: none;
   margin: 0;
@@ -540,6 +548,7 @@ img {
 }
 
 .footer__img {
+  filter: var(--svg-footer);
   transform: rotate(180deg);
 }
 
