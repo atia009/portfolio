@@ -27,7 +27,8 @@ The portfolio website is hosted with Netlify and can be found at [aarontia.netli
 
 - Responsive design
 - Back to top button for easier navigation
-- ui for light/dark mode
+- Light/Dark mode ui
+- Typed effect
 
 <a name="technologies"></a>
 
