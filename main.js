@@ -62,7 +62,7 @@ function generateProjectsMarkup() {
             <div class="card__bg" style="background-image: url(${project.img});">
             <p class="card__number card__number${getClassForCard(++cardNum)}">0${cardNum}</p>
                 <div class="info info${getClassForCard(cardNum)}">
-                    <h3 class="info__title">${project.title}</h3>
+                    <div class="info-container"><h3 class="info__title">${project.title}</h3></div>
                     <p class="info__desc">${project.desc}</p>
                     <ul class="tech">
                     ${generateTechsMarkup(project.tech)}</ul>
