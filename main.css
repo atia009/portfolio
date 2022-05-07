@@ -312,28 +312,17 @@ body {
    =============== */
 
 @font-face {
-  font-family: "League Spartan Bold";
-  src: url(fonts/LeagueSpartan-Bold.ttf);
+  font-family: "League Spartan";
+  src: url(fonts/league-spartan-bold.woff2);
 }
-
 @font-face {
-  font-family: "League Spartan Regular";
-  src: url(fonts/LeagueSpartan-Regular.ttf);
-}
-
-@font-face {
-  font-family: "Libre Baskerville Bold";
-  src: url(fonts/LibreBaskerville-Bold.ttf);
-}
-
-@font-face {
-  font-family: "Libre Baskerville Regular";
-  src: url(fonts/LibreBaskerville-Regular.ttf);
+  font-family: "Libre Baskerville";
+  src: url(fonts/libre-baskerville-regular.woff);
 }
 
 a {
   color: var(--txt-color);
-  font-family: "League Spartan Bold", sans-serif;
+  font-family: "League Spartan", sans-serif;
   font-size: 1rem;
   text-decoration: none;
 }
@@ -341,16 +330,16 @@ a {
 h1,
 h2,
 h3 {
-  font-family: "League Spartan Bold", sans-serif;
+  font-family: "League Spartan", sans-serif;
 }
 
 p {
-  font-family: "Libre Baskerville Regular", serif;
+  font-family: "Libre Baskerville", serif;
 }
 
 strong {
   color: var(--lt-color);
-  font-family: "Libre Baskerville Regular", serif;
+  font-family: "Libre Baskerville", serif;
   font-weight: 700;
 }
 
@@ -668,6 +657,7 @@ img {
   }
 
   .nav {
+    align-items: center;
     display: flex;
     flex: 1;
     justify-content: space-between;
@@ -683,5 +673,18 @@ img {
   .social {
     display: flex;
     gap: 40px;
+  }
+}
+
+@media (min-width: 900px) {
+  #home,
+  #about,
+  #projects,
+  .info-container {
+    font-size: 45px;
+  }
+
+  .card {
+    height: 480px;
   }
 }
