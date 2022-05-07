@@ -369,6 +369,15 @@ ul {
   color: var(--txt-toggle);
 }
 
+.links__link {
+  color: var(--secondary-toggle);
+}
+
+.links,
+.social {
+  display: none;
+}
+
 .mobile-links {
   display: flex;
   flex-flow: column nowrap;
@@ -447,9 +456,13 @@ ul {
 .tech {
   display: flex;
   flex-flow: row wrap;
-  font-size: max(0.5rem, 0.46153846em);
   opacity: 0.75;
   gap: 7.5px;
+}
+
+.skills__item,
+.tech__item {
+  font-size: max(0.5rem, 0.46153846em);
 }
 
 .projects__title {
@@ -616,8 +629,9 @@ img {
     font-size: 32px;
   }
 
-  #about,
-  .info {
+  .desc,
+  .info,
+  .skills {
     font-size: 26px;
   }
 
@@ -647,5 +661,27 @@ img {
 
   .card__number--odd {
     right: 45px;
+  }
+
+  .mobile-toggle {
+    display: none;
+  }
+
+  .nav {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+  }
+
+  .nav,
+  #header {
+    flex-flow: row-reverse nowrap;
+    gap: 40px;
+  }
+
+  .links,
+  .social {
+    display: flex;
+    gap: 40px;
   }
 }
