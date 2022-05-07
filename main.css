@@ -395,7 +395,7 @@ ul {
 }
 
 .intro__title {
-  font-size: 2rem;
+  font-size: max(2rem, 1.41em);
   margin: 0 0 0.2em;
 }
 
@@ -414,7 +414,7 @@ ul {
 
 .about__title,
 .projects__title {
-  font-size: 1.375rem;
+  font-size: max(1.4rem, 0.72em);
   margin: 25px 0px 70px;
 }
 
@@ -430,7 +430,7 @@ ul {
 .desc__body,
 .desc__tech,
 .info__desc {
-  font-size: 0.75rem;
+  font-size: max(0.75rem, 0.61538462em);
 }
 
 .desc__body {
@@ -443,10 +443,12 @@ ul {
   text-align: left;
 }
 
-.skills {
+.skills,
+.tech {
   display: flex;
   flex-flow: row wrap;
-  font-size: 0.5rem;
+  font-size: max(0.5rem, 0.46153846em);
+  opacity: 0.75;
   gap: 7.5px;
 }
 
@@ -484,9 +486,6 @@ ul {
 }
 
 .tech {
-  display: flex;
-  font-size: 0.5rem;
-  gap: 7.5px;
   margin: 5px 0 20px 0;
 }
 
@@ -527,6 +526,7 @@ button {
 
 .intro__btn,
 .external__btn {
+  font-size: 1rem;
   position: relative;
   vertical-align: top;
 }
@@ -607,5 +607,45 @@ img {
 
   .card__number--odd {
     right: 22.5px;
+  }
+}
+
+@media (min-width: 700px) {
+  #home,
+  .cards {
+    font-size: 32px;
+  }
+
+  #about,
+  .info {
+    font-size: 26px;
+  }
+
+  .card {
+    height: 420px;
+  }
+
+  .info {
+    bottom: 90px;
+  }
+
+  .card__number {
+    top: 45px;
+  }
+
+  .info--even {
+    right: 90px;
+  }
+
+  .info--odd {
+    left: 90px;
+  }
+
+  .card__number--even {
+    left: 45px;
+  }
+
+  .card__number--odd {
+    right: 45px;
   }
 }
