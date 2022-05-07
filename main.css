@@ -471,15 +471,15 @@ ul {
 }
 
 .card__number--even {
-  left: 25px;
+  left: 12.5px;
 }
 
 .card__number--odd {
-  right: 25px;
+  right: 12.5px;
 }
 
 .info__title {
-  font-size: 1.375rem;
+  font-size: max(1.125rem, 1em);
   margin-bottom: 0.2em;
 }
 
@@ -575,6 +575,7 @@ img {
 /* ===============
    MEDIA QUERIES
    =============== */
+
 @media (min-width: 400px) {
   .card {
     height: 340px;
@@ -592,13 +593,19 @@ img {
     top: 30px;
   }
 
-  .info--even,
-  .card__number--odd {
+  .info--even {
     right: 45px;
   }
 
-  .info--odd,
-  .card__number--even {
+  .info--odd {
     left: 45px;
+  }
+
+  .card__number--even {
+    left: 22.5px;
+  }
+
+  .card__number--odd {
+    right: 22.5px;
   }
 }
