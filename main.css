@@ -556,6 +556,7 @@ button {
 
 img {
   filter: var(--svg-toggle);
+  -webkit-filter: var(--svg-toggle);
 }
 
 .intro__img,
@@ -565,7 +566,7 @@ img {
   opacity: 40%;
   position: absolute;
   top: 50%;
-  transform: translateY(-65%);
+  transform: translateY(-55%);
   width: 15px;
 }
 
