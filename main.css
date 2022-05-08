@@ -25,6 +25,7 @@
     brightness(102%) contrast(102%);
   --svg-footer: invert(87%) sepia(9%) saturate(379%) hue-rotate(196deg)
     brightness(82%) contrast(89%);
+  --mobile-color: #b0b2c3;
   --txt-color: #ffffff;
   --dark-color: #2e5c49;
   --med-color: #54a885;
@@ -222,12 +223,12 @@ body {
 }
 
 .nav-enter__bar {
+  background-color: var(--secondary-toggle);
   height: 3px;
 }
 
 .nav-enter__bar,
 .nav-exit__bar {
-  background-color: var(--secondary-toggle);
   border-radius: 5px;
   display: block;
   width: 100%;
@@ -244,13 +245,14 @@ body {
 }
 
 .nav-exit {
-  margin-left: auto;
   height: 42px;
-  width: 42px;
+  margin-left: auto;
   position: relative;
+  width: 42px;
 }
 
 .nav-exit__bar {
+  background-color: var(--mobile-color);
   height: 4px;
   position: absolute;
 }
