@@ -128,8 +128,7 @@ function startColorModeFunctionality() {
 function updateColorMode() {
     updateRootVariable(`--primary-toggle`, `#1c1d25`, `#ebebeb`);
     updateRootVariable(`--secondary-toggle`, `#b0b2c3`, `#4c4f65`);
-    updateRootVariable(`--svg-toggle`, `invert(87%) sepia(9%) saturate(379%) hue-rotate(196deg)
-    brightness(82%) contrast(89%)`, `invert(28%) sepia(9%) saturate(1237%) hue-rotate(195deg) brightness(99%) contrast(88%)`);
+    updateRootVariable(`--hover-toggle`, `#ffffff`, `#1c1d25`);
     updateRootVariable(`--txt-toggle`, `#ffffff`, `#4c4f65`);
 }
 
