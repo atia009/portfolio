@@ -17,21 +17,18 @@
 :root {
   --primary-toggle: #1c1d25;
   --secondary-toggle: #b0b2c3;
-  --svg-toggle: invert(87%) sepia(9%) saturate(379%) hue-rotate(196deg)
-    brightness(82%) contrast(89%);
   --hover-toggle: #ffffff;
   --txt-toggle: #ffffff;
   --svg-filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(70deg)
     brightness(102%) contrast(102%);
-  --svg-footer: invert(87%) sepia(9%) saturate(379%) hue-rotate(196deg)
-    brightness(82%) contrast(89%);
-  --mobile-color: #b0b2c3;
   --txt-color: #ffffff;
   --dark-color: #2e5c49;
   --med-color: #54a885;
   --lt-color: #6edbae;
   --bg-color: #f3f3f3;
   --footer-color: #1c1d25;
+  --footer-icon-color: #b0b2c3;
+  --footer-icon-hover: #ffffff;
 }
 
 *:where(:not(img, svg, video):not(svg *, symbol *)) {
@@ -555,9 +552,13 @@ button {
    SALIENT FEATURES
    =============== */
 
-img {
-  filter: var(--svg-toggle);
-  -webkit-filter: var(--svg-toggle);
+svg {
+  fill: var(--secondary-toggle);
+  transition: fill 0.35s ease;
+}
+
+svg:hover {
+  fill: var(--hover-toggle);
 }
 
 .intro__img,
@@ -571,9 +572,13 @@ img {
   width: 15px;
 }
 
-.footer__img {
-  filter: var(--svg-footer);
+.footer__icon {
+  fill: var(--footer-icon-color);
   transform: rotate(180deg);
+}
+
+.footer__icon:hover {
+  fill: var(--footer-icon-hover);
 }
 
 /* ===============
