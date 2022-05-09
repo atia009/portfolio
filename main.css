@@ -360,6 +360,11 @@ ul {
 
 .links__link {
   color: var(--secondary-toggle);
+  transition: color 0.35s ease;
+}
+
+.links__link:hover {
+  color: var(--hover-toggle);
 }
 
 .links,
@@ -496,10 +501,6 @@ ul {
   gap: 60px;
   justify-content: center;
   margin: 30px 0;
-}
-
-.media__item {
-  font-size: 1rem;
 }
 
 .footer__copyright {
