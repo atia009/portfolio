@@ -1,6 +1,3 @@
-/* Work on hover effects for links__link */
-/* Add the hover effects only to media query 700px */
-
 /* CSS DIRECTORY
         1. =GLOBAL SETTINGS (variables, resets)
         2. =PRIMARY LAYOUT (body, projects)
@@ -569,6 +566,10 @@ button {
   -ms-touch-action: none;
 }
 
+.--animation-link {
+  position: relative;
+}
+
 /* ===============
    SALIENT FEATURES
    =============== */
@@ -725,6 +726,32 @@ svg {
 
   .projects__mask::after {
     width: 72.5%;
+  }
+
+  .--animation-link::before,
+  .--animation-link::after {
+    border-radius: 5px;
+    bottom: -2px;
+    content: "";
+    height: 3px;
+    left: auto;
+    position: absolute;
+    right: 0;
+    width: 0;
+  }
+
+  .--animation-link::before {
+    background-color: var(--dark-color);
+  }
+
+  .--animation-link::after {
+    background-color: var(--lt-color);
+  }
+
+  .--animation-link:hover::before,
+  .--animation-link:hover::after {
+    left: 0;
+    width: 100%;
   }
 }
 
