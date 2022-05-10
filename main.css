@@ -392,7 +392,7 @@ ul {
 
 .mobile-social {
   display: flex;
-  margin-left: 25px;
+  margin: 0 0 60px 25px;
   gap: 30px;
 }
 
@@ -554,6 +554,8 @@ button {
 
 .--overflow {
   overflow: hidden;
+  touch-action: none;
+  -ms-touch-action: none;
 }
 
 /* ===============
