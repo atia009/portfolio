@@ -296,8 +296,6 @@ body {
   background-color: var(--primary-toggle);
   display: flex;
   flex-flow: column nowrap;
-  align-items: center;
-  justify-content: flex-end;
   height: 100vh;
   position: relative;
   z-index: 1;
@@ -532,6 +530,14 @@ button {
   background: none;
   cursor: pointer;
   padding: 0;
+}
+
+.home__btn {
+  bottom: 80px;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
 }
 
 .intro__btn,
