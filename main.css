@@ -252,10 +252,11 @@ body {
   margin-left: auto;
   position: relative;
   width: 42px;
+  top: -10px;
 }
 
 .nav-exit__bar {
-  background-color: var(--mobile-color);
+  background-color: var(--footer-icon-color);
   height: 4px;
   position: absolute;
 }
@@ -277,7 +278,7 @@ body {
   left: 0;
   top: 0;
   height: 100vh;
-  padding: 30px 20px;
+  padding: 20px;
   position: fixed;
   width: 100vw;
   z-index: 9;
@@ -576,6 +577,12 @@ svg:hover {
   top: 50%;
   transform: translateY(-55%);
   width: 15px;
+}
+
+.mobile-social__icon {
+  fill: var(--txt-color);
+  height: 30px;
+  width: 30px;
 }
 
 .footer__icon {
