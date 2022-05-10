@@ -197,18 +197,17 @@ body {
    =============== */
 
 #header {
-  background-color: var(--primary-toggle);
-  padding: 20px;
-  width: 100%;
-}
-
-.header-wrap {
   align-items: flex-start;
   display: flex;
   justify-content: space-between;
-  margin: auto;
+  padding: 20px;
+  position: absolute;
+  left: 50%;
   max-width: 1170px;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
   width: 100%;
+  z-index: 5;
 }
 
 .mobile-toggle {
@@ -300,6 +299,8 @@ body {
   align-items: center;
   justify-content: flex-end;
   height: 100vh;
+  position: relative;
+  z-index: 1;
 }
 
 .intro {
@@ -529,6 +530,7 @@ button {
 .home__btn,
 .footer__btn {
   background: none;
+  cursor: pointer;
   padding: 0;
 }
 
@@ -683,7 +685,7 @@ svg:hover {
   }
 
   .nav,
-  .header-wrap {
+  #header {
     flex-flow: row-reverse nowrap;
     gap: 40px;
   }
