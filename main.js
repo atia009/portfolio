@@ -141,7 +141,7 @@ function removeClassFromElement(element, className) {
 }
 
 function updateRootVariable(name, value1, value2) {
-    if ((getRootVariableValue(name) === undefined) || (getRootVariableValue(name) === value1)) {
+    if ((getRootVariableValue(name) === ``) || (getRootVariableValue(name) === value1)) {
         setRootVariableValue(name, value2);
     } else {
         setRootVariableValue(name, value1);
