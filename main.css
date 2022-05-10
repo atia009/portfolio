@@ -1,3 +1,6 @@
+/* Work on hover effects for links__link */
+/* Add the hover effects only to media query 700px */
+
 /* CSS DIRECTORY
         1. =GLOBAL SETTINGS (variables, resets)
         2. =PRIMARY LAYOUT (body, projects)
@@ -575,10 +578,6 @@ svg {
   transition: fill 0.35s ease;
 }
 
-svg:hover {
-  fill: var(--hover-toggle);
-}
-
 .intro__img,
 .external__icon {
   filter: var(--svg-filter);
@@ -705,6 +704,10 @@ svg:hover {
     align-items: flex-start;
     display: flex;
     gap: 40px;
+  }
+
+  svg:hover {
+    fill: var(--hover-toggle);
   }
 }
 
