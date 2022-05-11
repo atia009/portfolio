@@ -734,7 +734,6 @@ svg {
     bottom: -2px;
     content: "";
     height: 3px;
-    left: auto;
     position: absolute;
     right: 0;
     width: 0;
@@ -742,10 +741,12 @@ svg {
 
   .--animation-link::before {
     background-color: var(--dark-color);
+    transition: all 0.25s cubic-bezier(0.694, 0.048, 0.335, 1) 0.15s;
   }
 
   .--animation-link::after {
     background-color: var(--lt-color);
+    transition: all 0.25s cubic-bezier(0.694, 0.048, 0.335, 1);
   }
 
   .--animation-link:hover::before,
