@@ -90,6 +90,7 @@ img {
 
 body {
   background-color: var(--bg-color);
+  line-height: 1.5;
   margin: 0 auto;
   text-align: center;
 }
@@ -310,6 +311,18 @@ body {
   padding: 80px 5%;
 }
 
+.about-wrap {
+  margin: 0 auto;
+  max-width: 1070px;
+  width: 100%;
+}
+
+.desc,
+.skills {
+  margin: 0 auto;
+  width: 90%;
+}
+
 /* ===============
    TEXT RELATED
    =============== */
@@ -440,14 +453,8 @@ ul {
   font-size: max(0.75rem, 0.61538462em);
 }
 
-.desc__body {
-  margin: 0;
-  text-align: left;
-}
-
 .desc__tech {
-  margin: 10px 0;
-  text-align: left;
+  margin: 10px auto;
 }
 
 .skills,
@@ -456,6 +463,10 @@ ul {
   flex-flow: row wrap;
   opacity: 0.75;
   gap: 7.5px;
+}
+
+.skills {
+  justify-content: center;
 }
 
 .skills__item,
@@ -653,6 +664,14 @@ svg {
     font-size: 26px;
   }
 
+  .desc__body {
+    text-align: left;
+  }
+
+  .desc__tech {
+    margin: 20px 0;
+  }
+
   .card {
     height: 420px;
   }
@@ -760,6 +779,11 @@ svg {
   #projects,
   .nav {
     width: 1000px;
+  }
+
+  .desc,
+  .skills {
+    width: 53%;
   }
 
   .card__bg--even {
