@@ -22,9 +22,9 @@
   --svg-filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(70deg)
     brightness(102%) contrast(102%);
   --txt-color: #ffffff;
-  --dark-color: #2e5c49;
-  --med-color: #54a885;
-  --lt-color: #6edbae;
+  --dark-color: #101b3b;
+  --med-color: #235aa6;
+  --lt-color: #4b91f2;
   --bg-color: #f3f3f3;
   --footer-color: #1c1d25;
   --footer-icon-color: #b0b2c3;
