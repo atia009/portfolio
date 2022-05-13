@@ -439,9 +439,8 @@ ul {
 }
 
 .about__subtitle,
-.projects__subtitle,
-.card__number {
-  color: var(--dark-color);
+.projects__subtitle {
+  color: var(--med-color);
   font-size: 0.75rem;
   margin: 0;
   text-transform: uppercase;
@@ -759,7 +758,7 @@ svg {
   }
 
   .--animation-link::before {
-    background-color: var(--dark-color);
+    background-color: var(--med-color);
     transition: all 0.25s cubic-bezier(0.694, 0.048, 0.335, 1) 0.15s;
   }
 
