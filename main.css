@@ -157,6 +157,7 @@ body {
   margin: auto;
   position: relative;
   width: 95%;
+  overflow: hidden;
 }
 
 .card__bg::before {
@@ -168,6 +169,7 @@ body {
   position: absolute;
   top: 0;
   width: 100%;
+  z-index: 2;
 }
 
 .info {
@@ -813,6 +815,26 @@ svg {
   .--animation-btn:hover::before {
     background-color: var(--lt-color);
     transform: translateX(130%);
+  }
+
+  .card__bg::after {
+    background: linear-gradient(270deg, var(--lt-color), var(--dark-color));
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    transform: translateX(-100%);
+    transition: transform 0.35s cubic-bezier(0.694, 0.048, 0.335, 1) 0.2s,
+      opacity 0.2s,
+      -webkit-transform 0.35s cubic-bezier(0.694, 0.048, 0.335, 1) 0.2s;
+    z-index: 1;
+  }
+
+  .card__bg:hover::after {
+    transform: translateX(0);
   }
 }
 
