@@ -432,6 +432,16 @@ ul {
   width: 1px;
 }
 
+.intro__link,
+.external__link {
+  display: flex;
+  justify-content: center;
+}
+
+.intro__link--ghost {
+  color: var(--lt-color);
+}
+
 .about__title,
 .projects__title {
   font-size: max(1.4rem, 0.72em);
@@ -528,10 +538,9 @@ ul {
    =============== */
 
 button {
-  background: linear-gradient(95deg, var(--dark-color), var(--lt-color));
+  background: linear-gradient(95deg, var(--med-color), var(--lt-color));
   border: 0;
   border-radius: 5px;
-  padding: 12px 20px;
 }
 
 .color-mode,
@@ -553,13 +562,21 @@ button {
 .intro__btn,
 .external__btn {
   font-size: 1rem;
+  height: 48px;
   position: relative;
+  text-align: center;
   vertical-align: top;
+  width: 130px;
 }
 
 .intro__btn:nth-of-type(2),
 .external__btn:nth-of-type(2) {
   margin-left: 20px;
+}
+
+.intro__btn--ghost {
+  background: transparent;
+  border: 1px solid var(--lt-color);
 }
 
 /* ===============
@@ -589,21 +606,19 @@ svg {
   transition: fill 0.35s ease;
 }
 
-.intro__img,
-.external__icon {
-  filter: var(--svg-filter);
-  height: 15px;
-  opacity: 40%;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-55%);
-  width: 15px;
+.external-icon {
+  fill: var(--txt-color);
+  margin: -1px 7.5px 0 0;
 }
 
 .mobile-social__icon {
   fill: var(--txt-color);
   height: 30px;
   width: 30px;
+}
+
+.intro__icon--ghost {
+  fill: var(--lt-color);
 }
 
 .footer__icon {
