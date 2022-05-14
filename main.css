@@ -435,6 +435,7 @@ ul {
 .intro__link,
 .external__link {
   display: flex;
+  font-size: 0.875rem;
   justify-content: center;
 }
 
@@ -561,12 +562,11 @@ button {
 
 .intro__btn,
 .external__btn {
-  font-size: 1rem;
-  height: 48px;
+  height: 42.5px;
   position: relative;
   text-align: center;
   vertical-align: top;
-  width: 130px;
+  width: 110px;
 }
 
 .intro__btn:nth-of-type(2),
@@ -608,7 +608,7 @@ svg {
 
 .external-icon {
   fill: var(--txt-color);
-  margin: -1px 7.5px 0 0;
+  margin: -2px 7.5px 0 0;
 }
 
 .mobile-social__icon {
