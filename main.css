@@ -495,8 +495,11 @@ ul {
 }
 
 .card__number {
+  font-family: "League Spartan";
+  font-size: min(1rem, 0.75em);
   position: absolute;
   top: 25px;
+  z-index: 10;
 }
 
 .card__number--even {
@@ -844,13 +847,5 @@ svg {
   .desc,
   .skills {
     width: 53%;
-  }
-
-  .card__bg--even {
-    margin-left: 0;
-  }
-
-  .card__bg--odd {
-    margin-right: 0;
   }
 }
