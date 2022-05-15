@@ -145,7 +145,7 @@ body {
 
 .card__bg,
 .card__bg::before {
-  border-radius: 5px;
+  border-radius: 3px;
   height: 100%;
 }
 
@@ -234,7 +234,7 @@ body {
 
 .nav-enter__bar,
 .nav-exit__bar {
-  border-radius: 5px;
+  border-radius: 3px;
   display: block;
   width: 100%;
 }
@@ -536,7 +536,7 @@ ul {
 button {
   background: linear-gradient(95deg, var(--med-color), var(--lt-color));
   border: 0;
-  border-radius: 5px;
+  border-radius: 3px;
   overflow: hidden;
 }
 
@@ -562,6 +562,7 @@ button {
   text-align: center;
   vertical-align: top;
   width: 110px;
+  z-index: 2;
 }
 
 .intro__btn:nth-of-type(2) {
@@ -591,10 +592,6 @@ button {
   position: relative;
 }
 
-.--animation-btn {
-  position: relative;
-}
-
 /* ===============
    SALIENT FEATURES
    =============== */
@@ -602,11 +599,6 @@ button {
 svg {
   fill: var(--secondary-toggle);
   transition: fill 0.35s ease;
-}
-
-.external-icon {
-  fill: var(--txt-color);
-  margin: -2px 7.5px 0 0;
 }
 
 .mobile-social__icon {
@@ -619,8 +611,9 @@ svg {
   fill: var(--txt-color);
 }
 
-.intro__icon--ghost {
+.intro__icon {
   fill: var(--lt-color);
+  margin: -3.5px 7.5px 0 0;
 }
 
 .footer__icon {
@@ -746,7 +739,8 @@ svg {
     fill: var(--hover-toggle);
   }
 
-  .external__icon:hover {
+  .external__icon:hover,
+  .intro__icon:hover {
     fill: var(--lt-color);
   }
 }
@@ -769,7 +763,7 @@ svg {
 
   .--animation-link::before,
   .--animation-link::after {
-    border-radius: 5px;
+    border-radius: 3px;
     bottom: -2px;
     content: "";
     height: 3px;
@@ -794,26 +788,30 @@ svg {
     width: 100%;
   }
 
-  .--animation-btn::before {
-    border-radius: 5px;
+  .intro__btn::before {
+    border-radius: 3px;
     content: "";
     height: 100%;
     left: 0;
     position: absolute;
     top: 0;
-    transform: translateX(-110%);
+    transform: translateX(-100%);
     width: 100%;
+    z-index: -1;
   }
 
-  .--animation-btn::before {
+  .intro__btn::before {
     background-color: var(--med-color);
-    transition: transform 0.75s cubic-bezier(0.694, 0.048, 0.335, 1),
-      background-color 0.75s cubic-bezier(0.875, 0.023, 1, 0.134);
+    transition: transform 0.75s cubic-bezier(0.694, 0.048, 0.335, 1);
   }
 
-  .--animation-btn:hover::before {
+  .intro__btn--ghost::before {
     background-color: var(--lt-color);
-    transform: translateX(130%);
+    opacity: 0.25;
+  }
+
+  .intro__btn:hover::before {
+    transform: translateX(0%);
   }
 
   .card__bg::after {
