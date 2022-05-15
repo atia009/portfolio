@@ -410,12 +410,6 @@ ul {
   gap: 30px;
 }
 
-.mobile-social__img {
-  filter: var(--svg-filter);
-  height: 30px;
-  width: 30px;
-}
-
 .intro__title {
   font-size: max(2rem, 1.41em);
   margin: 0 0 0.2em;
@@ -434,8 +428,7 @@ ul {
   width: 1px;
 }
 
-.intro__link,
-.external__link {
+.intro__link {
   display: flex;
   font-size: 0.875rem;
   justify-content: center;
@@ -470,11 +463,11 @@ ul {
 }
 
 .skills,
-.tech {
+.tech,
+.external {
   display: flex;
   flex-flow: row wrap;
-  opacity: 0.75;
-  gap: 7.5px;
+  gap: 20px;
 }
 
 .skills {
@@ -563,8 +556,7 @@ button {
   -webkit-transform: translateX(-50%);
 }
 
-.intro__btn,
-.external__btn {
+.intro__btn {
   height: 42.5px;
   position: relative;
   text-align: center;
@@ -572,8 +564,7 @@ button {
   width: 110px;
 }
 
-.intro__btn:nth-of-type(2),
-.external__btn:nth-of-type(2) {
+.intro__btn:nth-of-type(2) {
   margin-left: 20px;
 }
 
@@ -622,6 +613,10 @@ svg {
   fill: var(--txt-color);
   height: 30px;
   width: 30px;
+}
+
+.external__icon {
+  fill: var(--txt-color);
 }
 
 .intro__icon--ghost {
@@ -749,6 +744,10 @@ svg {
 
   svg:hover {
     fill: var(--hover-toggle);
+  }
+
+  .external__icon:hover {
+    fill: var(--lt-color);
   }
 }
 
