@@ -53,6 +53,7 @@ function startWebsiteFunctionality() {
     setHTMLOfElement(document.querySelector(`.cards`), generateProjectsMarkup());
     startNavFunctionality();
     startColorModeFunctionality();
+    startSmoothScroll();
 }
 
 function generateProjectsMarkup() {
@@ -175,6 +176,20 @@ function startTypedEffect() {
             startTypedEffect();
         }, 100);
     } 
+}
+
+function startSmoothScroll() {
+    const internalLinks = document.querySelectorAll(`.--smooth-scroll`);
+    internalLinks.forEach(link => link.addEventListener(`click`, updatePageScroll));
+}
+
+function updatePageScroll(event) {
+    const targetLink = event.currentTarget.getAttribute(`href`);
+    event.preventDefault();
+    window.scrollTo({
+        top: document.querySelector(targetLink).offsetTop, 
+        behavior: `smooth`
+        });
 }
 
 
