@@ -117,7 +117,8 @@ function startNavFunctionality() {
 function updateMobileNavVisibility() {
     const mobile = document.querySelector(`.mobile-nav`);
     const body = document.querySelector(`body`);
-    updateClassVisibility(mobile, `--hidden`);
+    updateToggleClass(mobile, `--animation-ease-right`, `--animation-ease-left`);
+    setTimeout(() => {updateClassVisibility(mobile, `--hidden`)}, 300);
     updateClassVisibility(body, `--overflow`);
 }
 
@@ -126,6 +127,16 @@ function updateClassVisibility(element, classToUpdate) {
         removeClassFromElement(element, classToUpdate);
     } else {
         addClassToElement(element, classToUpdate);
+    }
+}
+
+function updateToggleClass(element, classEnter, classExit) {
+    if (element.classList.contains(classEnter)) {
+        removeClassFromElement(element, classEnter);
+        addClassToElement(element,classExit);    setTimeout(() => {console.log("delay")}, 5000 )
+    } else {
+        removeClassFromElement(element, classExit);
+        addClassToElement(element,classEnter);
     }
 }
 
@@ -191,7 +202,6 @@ function updatePageScroll(event) {
         behavior: `smooth`
         });
 }
-
 
 
 // asynchrounous calls
