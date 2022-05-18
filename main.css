@@ -93,6 +93,15 @@ img {
   }
 }
 
+@keyframes easeLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translate(-100%);
+  }
+}
+
 /* ===============
    PRIMARY LAYOUT
    =============== */
@@ -295,7 +304,6 @@ body {
 }
 
 .mobile-nav::before {
-  animation: easeRight 0.45s cubic-bezier(.694,.048,.335,1);
   background-color: var(--footer-color);
   background: linear-gradient(90deg, var(--dark-color), var(--med-color));
   content: "";
@@ -622,6 +630,14 @@ button {
   transition-delay: .1s;
   visibility: visible;
   z-index: 45;
+}
+
+.--animation-ease-right {
+  animation: easeRight 0.45s cubic-bezier(.694,.048,.335,1);
+}
+
+.--animation-ease-left {
+  animation: easeLeft 0.45s cubic-bezier(.694,.048,.335,1);
 }
 
 /* ===============
