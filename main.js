@@ -117,7 +117,15 @@ function startNavFunctionality() {
 function updateMobileNavVisibility() {
     const mobile = document.querySelector(`.mobile-nav`);
     const body = document.querySelector(`body`);
+    const links = document.querySelector(`.mobile-links`);
+    const social = document.querySelector(`.mobile-social`);
+    const exit = document.querySelector(`.nav-exit`);
+
     updateToggleClass(mobile, `--animation-ease-right`, `--animation-ease-left`);
+    updateToggleClass(links, `--animation-ease-top`, `--animation-ease-bottom`);
+    updateToggleClass(social, `--animation-ease-top`, `--animation-ease-bottom`);
+    updateToggleClass(exit, `--animation-ease-top`, `--animation-ease-bottom`);
+
     setTimeout(() => {updateClassVisibility(mobile, `--hidden`)}, 300);
     updateClassVisibility(body, `--overflow`);
 }
@@ -133,7 +141,7 @@ function updateClassVisibility(element, classToUpdate) {
 function updateToggleClass(element, classEnter, classExit) {
     if (element.classList.contains(classEnter)) {
         removeClassFromElement(element, classEnter);
-        addClassToElement(element,classExit);    setTimeout(() => {console.log("delay")}, 5000 )
+        addClassToElement(element,classExit);   
     } else {
         removeClassFromElement(element, classExit);
         addClassToElement(element,classEnter);
