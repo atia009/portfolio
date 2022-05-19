@@ -521,7 +521,7 @@ ul {
   gap: 20px;
 }
 
-.skills {animation: blink 0.8s infinite alternate step-end;
+.skills {
   justify-content: center;
 }
 
@@ -749,6 +749,10 @@ svg {
   .info,
   .skills {
     font-size: 26px;
+  }
+
+  .home__btn {
+    bottom: 20px;
   }
 
   .desc__body {
