@@ -98,7 +98,29 @@ img {
     transform: translateX(0);
   }
   100% {
-    transform: translate(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes easeTop {
+  0% {
+    opacity: 0%;
+    transform: translateY(30%);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}
+
+@keyframes easeBottom {
+  0% {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0%;
+    transform: translateY(30%);
   }
 }
 
@@ -638,6 +660,14 @@ button {
 
 .--animation-ease-left {
   animation: easeLeft 0.45s cubic-bezier(.694,.048,.335,1);
+}
+
+.--animation-ease-top {
+  animation: easeTop 0.85s cubic-bezier(.694,.048,.335,1);
+}
+
+.--animation-ease-bottom {
+  animation: easeBottom 0.20s cubic-bezier(.694,.048,.335,1);
 }
 
 /* ===============
