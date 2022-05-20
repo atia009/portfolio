@@ -912,9 +912,22 @@ svg {
     z-index: 1;
   }
 
+  .info, .card__number {
+    transition: transform .45s;
+    transition-delay: .40s;
+  }
+
   .card__bg:hover::after {
     transform: translateX(0);
   }
+
+  .card:hover .card__number {
+    transform: scale(1.45);
+  }
+
+  .card:hover .info {
+    transform: scale(1.05);
+  } 
 }
 
 @media (min-width: 1050px) {
