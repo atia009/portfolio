@@ -912,9 +912,14 @@ svg {
     z-index: 1;
   }
 
-  .info, .card__number {
+  .info {
     transition: transform .45s;
     transition-delay: .40s;
+  }
+
+  .card__number {
+    transition: transform .35s;
+    transition-delay: .75s;
   }
 
   .card__bg:hover::after {
