@@ -159,6 +159,7 @@ function updateColorMode() {
     updateRootVariable(`--secondary-toggle`, `#b0b2c3`, `#4c4f65`);
     updateRootVariable(`--hover-toggle`, `#ffffff`, `#1c1d25`);
     updateRootVariable(`--txt-toggle`, `#ffffff`, `#4c4f65`);
+    updateRootVariable(`--about-toggle`, `#235aa6`, `#7cadf2`);
 }
 
 function updateColorLabel() {
