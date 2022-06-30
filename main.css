@@ -360,6 +360,10 @@ body {
   margin: auto;
 }
 
+#home, #about {
+  transition: all .8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
 #about {
   background-color: var(--about-toggle);
   padding: 80px 5%;
