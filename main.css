@@ -340,7 +340,11 @@ body {
 
 #footer {
   background-color: var(--footer-color);
-  padding: 8% 0;
+  display: flex;
+  flex-flow: column nowrap;
+  height: 30vh;
+  justify-content: center;
+  padding: 20px 0;
 }
 
 /* ===============
@@ -366,11 +370,13 @@ body {
 
 #about {
   background-color: var(--about-toggle);
-  padding: 80px 5%;
+  display: flex;
+  height: 70vh;
+  padding: 0 5%;
 }
 
 .about-wrap {
-  margin: 0 auto;
+  margin: auto;
   max-width: 1070px;
   width: 100%;
 }
@@ -577,13 +583,12 @@ ul {
   display: flex;
   gap: 60px;
   justify-content: center;
-  margin: 30px 0;
 }
 
 .footer__copyright {
   color: var(--txt-color);
-  font-size: 0.75rem;
-  margin: 0;
+  font-size: 0.65rem;
+  margin-top: auto;
 }
 
 /* ===============
@@ -604,6 +609,7 @@ button {
   cursor: pointer;
   padding: 0;
 }
+
 
 .home__btn {
   bottom: 80px;
@@ -629,6 +635,10 @@ button {
 .intro__btn--ghost {
   background: transparent;
   border: 1px solid var(--lt-color);
+}
+
+.footer__btn {
+  margin: auto 0 15px;
 }
 
 /* ===============
@@ -828,6 +838,11 @@ svg {
   .intro__icon:hover {
     fill: var(--lt-color);
   }
+
+  .footer__btn {
+    margin: auto 0 25px;
+  }
+  
 }
 
 @media (min-width: 900px) {
