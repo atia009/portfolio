@@ -352,6 +352,7 @@ body {
    =============== */
 
 #home {
+  /* align-items: center; */
   background-color: var(--primary-toggle);
   display: flex;
   flex-flow: column nowrap;
@@ -464,6 +465,18 @@ ul {
   display: flex;
   margin: 0 0 60px 25px;
   gap: 30px;
+}
+
+/* .home__link {
+  margin-bottom: 30px;
+} */
+
+.home__link {
+  bottom: 15px;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
 }
 
 .intro__title {
@@ -612,11 +625,27 @@ button {
 
 
 .home__btn {
-  bottom: 80px;
-  left: 50%;
+  border-radius: 50%;
+  height: 90px;
+  position: relative;
+  width: 90px;
+}
+
+.home__btn::before {
+  background-color: var(--about-toggle);
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
   position: absolute;
-  transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
+  left: 0;
+  opacity: 0;
+  top: 0;
+  transform: scale(0,0);
+  transform-origin: center;
+  transition: all .8s cubic-bezier(0.22, 0.61, 0.36, 1);
+  z-index: 1;
 }
 
 .intro__btn {
@@ -698,6 +727,16 @@ svg {
   width: 30px;
 }
 
+.home__icon {
+  fill: none;
+  left: 50%;
+  position: absolute;
+  stroke: var(--secondary-toggle);
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+
 .external__icon {
   fill: var(--txt-color);
 }
@@ -764,8 +803,18 @@ svg {
     font-size: 26px;
   }
 
-  .home__btn {
-    bottom: 20px;
+  .home__link {
+    bottom: 40px;
+  }
+
+  .home__icon {
+    height: 60px;
+    width: 60px;
+  }
+
+  .home__btn:hover::before {
+    opacity: .8;
+    transform: scale(1,1);
   }
 
   .desc__body {
@@ -830,9 +879,10 @@ svg {
     gap: 40px;
   }
 
-  svg:hover {
+  .social__icon:hover, .color-mode__icon:hover {
     fill: var(--hover-toggle);
   }
+
 
   .external__icon:hover,
   .intro__icon:hover {
@@ -842,7 +892,6 @@ svg {
   .footer__btn {
     margin: auto 0 25px;
   }
-  
 }
 
 @media (min-width: 900px) {
@@ -851,6 +900,16 @@ svg {
   #projects,
   .info-container {
     font-size: 45px;
+  }
+
+  .home__icon {
+    height: 80px;
+    width: 80px;
+  }
+
+  .home__btn {
+    height: 110px;
+    width: 110px;
   }
 
   .card {
