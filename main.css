@@ -342,7 +342,7 @@ body {
   background-color: var(--footer-color);
   display: flex;
   flex-flow: column nowrap;
-  height: 30vh;
+  height: 25vh;
   justify-content: center;
   padding: 20px 0;
 }
@@ -371,7 +371,7 @@ body {
 #about {
   background-color: var(--about-toggle);
   display: flex;
-  height: 70vh;
+  height: 75vh;
   padding: 0 5%;
 }
 
@@ -587,6 +587,10 @@ ul {
   justify-content: center;
 }
 
+.footer__link {
+  margin: 0 auto 15px;
+}
+
 .footer__copyright {
   color: var(--txt-color);
   font-size: 0.65rem;
@@ -598,30 +602,28 @@ ul {
    =============== */
 
 button {
-  background: linear-gradient(95deg, var(--med-color), var(--lt-color));
   border: 0;
   border-radius: 3px;
   overflow: hidden;
-}
-
-.color-mode,
-.home__btn,
-.footer__btn {
-  background: none;
   cursor: pointer;
-  padding: 0;
 }
 
+.home__btn, .footer__btn {
+  border-radius: 50%;
+  position: relative;
+}
 
 .home__btn {
-  border-radius: 50%;
   height: 90px;
-  position: relative;
   width: 90px;
 }
 
-.home__btn::before {
-  background-color: var(--about-toggle);
+.footer__btn {
+  height: 55px;
+  width: 55px;
+}
+
+.home__btn::before, .footer__btn::before {
   border-radius: 50%;
   content: "";
   display: block;
@@ -637,15 +639,20 @@ button {
   z-index: 1;
 }
 
+.home__btn::before {
+  background-color: var(--about-toggle);
+}
+
+.footer__btn::before {
+  background-color: var(--med-color);
+}
+
 .intro__btn {
+  background: linear-gradient(95deg, var(--med-color), var(--lt-color));
   height: 42.5px;
   position: relative;
   width: 110px;
   z-index: 2;
-}
-
-.footer__btn {
-  margin: auto 0 15px;
 }
 
 /* ===============
@@ -705,32 +712,25 @@ svg {
   width: 30px;
 }
 
-.home__icon {
+.home__icon, .footer__icon {
   fill: none;
   left: 50%;
   position: absolute;
-  stroke: var(--secondary-toggle);
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 5;
 }
 
-.external__icon {
-  fill: var(--txt-color);
-}
-
-.intro__icon {
-  fill: var(--lt-color);
-  margin: -3.5px 7.5px 0 0;
+.home__icon {
+  stroke: var(--secondary-toggle);
 }
 
 .footer__icon {
-  fill: var(--footer-icon-color);
-  transform: rotate(180deg);
+  stroke: var(--footer-icon-color);
 }
 
-.footer__icon:hover {
-  fill: var(--footer-icon-hover);
+.external__icon {
+  fill: var(--txt-color);
 }
 
 /* ===============
@@ -790,7 +790,7 @@ svg {
     width: 60px;
   }
 
-  .home__btn:hover::before {
+  .home__btn:hover::before, .footer__btn:hover::before {
     opacity: .8;
     transform: scale(1,1);
   }
@@ -865,10 +865,6 @@ svg {
   .external__icon:hover,
   .intro__icon:hover {
     fill: var(--lt-color);
-  }
-
-  .footer__btn {
-    margin: auto 0 25px;
   }
 }
 
