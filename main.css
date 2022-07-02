@@ -352,7 +352,6 @@ body {
    =============== */
 
 #home {
-  /* align-items: center; */
   background-color: var(--primary-toggle);
   display: flex;
   flex-flow: column nowrap;
@@ -467,10 +466,6 @@ ul {
   gap: 30px;
 }
 
-/* .home__link {
-  margin-bottom: 30px;
-} */
-
 .home__link {
   bottom: 15px;
   left: 50%;
@@ -498,13 +493,7 @@ ul {
 }
 
 .intro__link {
-  display: flex;
   font-size: 0.875rem;
-  justify-content: center;
-}
-
-.intro__link--ghost {
-  color: var(--lt-color);
 }
 
 .about__title,
@@ -651,19 +640,8 @@ button {
 .intro__btn {
   height: 42.5px;
   position: relative;
-  text-align: center;
-  vertical-align: top;
   width: 110px;
   z-index: 2;
-}
-
-.intro__btn:nth-of-type(2) {
-  margin-left: 20px;
-}
-
-.intro__btn--ghost {
-  background: transparent;
-  border: 1px solid var(--lt-color);
 }
 
 .footer__btn {
@@ -962,11 +940,6 @@ svg {
   .intro__btn::before {
     background-color: var(--med-color);
     transition: transform 0.75s cubic-bezier(0.694, 0.048, 0.335, 1);
-  }
-
-  .intro__btn--ghost::before {
-    background-color: var(--lt-color);
-    opacity: 0.25;
   }
 
   .intro__btn:hover::before {
