@@ -155,6 +155,7 @@ function startColorModeFunctionality() {
 
 function updateColorMode() {
     updateColorLabel();
+    updateThemeColor();
     updateRootVariable(`--primary-toggle`, `#1c1d25`, `#ebebeb`);
     updateRootVariable(`--secondary-toggle`, `#b0b2c3`, `#4c4f65`);
     updateRootVariable(`--hover-toggle`, `#ffffff`, `#1c1d25`);
@@ -173,6 +174,15 @@ function updateAttributeValue(name, value1, value2) {
         color.setAttribute(name, `Dark Mode`);
     } else {
         color.setAttribute(name, `Light Mode`);
+    }
+}
+
+function updateThemeColor() {
+    const themeColor = document.querySelector(`meta[name=theme-color]`);
+    if (themeColor.getAttribute(`content`) === `#1c1d25`) {
+        themeColor.setAttribute(`content`, `#ebebeb`);
+    } else {
+        themeColor.setAttribute(`content`, `#1c1d25`);
     }
 }
 
