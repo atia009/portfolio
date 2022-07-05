@@ -295,7 +295,7 @@ body {
   align-self: center;
   cursor: pointer;
   height: 42px;
-  margin-bottom: 25px;
+  margin-bottom: 50px;
   position: relative;
   width: 42px;
 }
@@ -316,7 +316,7 @@ body {
 
 .mobile-nav {
   align-items: center;
-  display: flex;
+  display: none;
   flex-flow: column nowrap;
   height: 100vh;
   justify-content: space-between;
@@ -450,7 +450,7 @@ ul {
 .mobile-links {
   display: flex;
   flex-flow: column nowrap;
-  gap: 50px;
+  gap: 40px;
   margin: auto;
 }
 
@@ -461,7 +461,7 @@ ul {
 
 .mobile-social {
   display: flex;
-  margin-top: 25px;
+  margin-top: 50px;
   gap: 30px;
 }
 
@@ -658,26 +658,9 @@ button {
    GENERAL CLASSES
    =============== */
 
-.--hidden {
-  display: none;
-  transition-delay: .1s;
-  z-index: 45;
-}
-
-.--overflow {
-  overflow: hidden;
-  touch-action: none;
-  -ms-touch-action: none;
-}
-
+   
 .--animation-link {
   position: relative;
-}
-
-.--toggle {
-  transition-delay: .1s;
-  visibility: visible;
-  z-index: 45;
 }
 
 .--animation-ease-right {
@@ -828,7 +811,7 @@ svg {
     width: 70%;
   }
 
-  .mobile-toggle, .mobile-nav {
+  .mobile-toggle {
     display: none;
   }
 

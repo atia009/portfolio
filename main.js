@@ -1,6 +1,7 @@
 // globals
 const projects = [];
 let typedCount = 0;
+const mediaDesktop = window.matchMedia(`(min-width:700px)`);
 
 // constructor
 function Project(title, img, demo, github) {
@@ -109,12 +110,12 @@ function startNavFunctionality() {
     const navExit = document.querySelector(`.nav-exit`);
     const links = document.querySelectorAll(`.mobile-links__item`);
     
-    navEnter.addEventListener(`click`, updateMobileNavVisibility);
-    navExit.addEventListener(`click`, updateMobileNavVisibility);
-    links.forEach(link => link.addEventListener(`click`, updateMobileNavVisibility));
+    navEnter.addEventListener(`click`, startMobileNavFunctionality);
+    navExit.addEventListener(`click`, startMobileNavFunctionality);
+    links.forEach(link => link.addEventListener(`click`, startMobileNavFunctionality));
 }
 
-function updateMobileNavVisibility() {
+function startMobileNavFunctionality() {
     const mobile = document.querySelector(`.mobile-nav`);
     const body = document.querySelector(`body`);
     const links = document.querySelector(`.mobile-links`);
@@ -126,15 +127,40 @@ function updateMobileNavVisibility() {
     updateToggleClass(social, `--animation-ease-top`, `--animation-ease-bottom`);
     updateToggleClass(exit, `--animation-ease-top`, `--animation-ease-bottom`);
 
-    setTimeout(() => {updateClassVisibility(mobile, `--hidden`)}, 300);
-    updateClassVisibility(body, `--overflow`);
+    // setTimeout(() => {updateClassVisibility(mobile, `--hidden`)}, 300);
+    // updateClassVisibility(body, `--overflow`);
+
+    setTimeout(() => {updateInlineStyle(mobile, `display:flex`, `display:none`)}, 300);
+    updateInlineStyle(body, `overflow:hidden`, `overflow:initial`);
 }
 
-function updateClassVisibility(element, classToUpdate) {
-    if (element.classList.contains(classToUpdate)) {
-        removeClassFromElement(element, classToUpdate);
+// function updateClassVisibility(element, classToUpdate) {
+//     if (element.classList.contains(classToUpdate)) {
+//         removeClassFromElement(element, classToUpdate);
+//     } else {
+//         addClassToElement(element, classToUpdate);
+//     }
+// }
+
+// function updateMobileVisibility() {
+//     const mobile = document.querySelector(`.mobile-nav`);
+//     if (mobile.getAttribute(`style`) === `display:flex`) {
+//         mobile.setAttribute(`style`, `display:none`);
+//     } else {
+//         mobile.setAttribute(`style`, `display:flex`);
+//     }
+// }
+
+// function updateOverflowScroll() {
+//     const body = document.querySelector(`body`);
+//     if ()
+// }
+
+function updateInlineStyle(element, style1, style2) {
+    if (element.getAttribute(`style`) === style1) {
+        element.setAttribute(`style`, `${style2}`);
     } else {
-        addClassToElement(element, classToUpdate);
+        element.setAttribute(`style`, `${style1}`);
     }
 }
 
@@ -237,7 +263,17 @@ function updatePageScroll(event) {
         });
 }
 
+function startMediaQueryFunctionality(screenSize) {
+    const mobile = document.querySelector(`.mobile-nav`);
+    if(screenSize.matches && mobile.classList.contains(`--animation-ease-right`) ) {
+        startMobileNavFunctionality();
+    }
+}
+
 
 // asynchrounous calls
 window.addEventListener("DOMContentLoaded", startWebsiteFunctionality);
 setTimeout(startTypedEffect, 1000);
+mediaDesktop.addEventListener("change", function(screenSize){
+    startMediaQueryFunctionality(screenSize.target);
+});
