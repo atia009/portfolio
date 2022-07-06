@@ -498,15 +498,7 @@ ul {
 .about__title,
 .projects__title {
   font-size: max(1.4rem, 0.72em);
-  margin: 25px 0px 70px;
-}
-
-.about__subtitle,
-.projects__subtitle {
-  color: var(--dark-color);
-  font-size: 0.75rem;
-  margin: 0;
-  text-transform: uppercase;
+  margin-bottom: 70px;
 }
 
 .desc__body,
