@@ -127,34 +127,10 @@ function startMobileNavFunctionality() {
     updateToggleClass(social, `--animation-ease-top`, `--animation-ease-bottom`);
     updateToggleClass(exit, `--animation-ease-top`, `--animation-ease-bottom`);
 
-    // setTimeout(() => {updateClassVisibility(mobile, `--hidden`)}, 300);
-    // updateClassVisibility(body, `--overflow`);
-
     setTimeout(() => {updateInlineStyle(mobile, `display:flex`, `display:none`)}, 300);
-    updateInlineStyle(body, `overflow:hidden`, `overflow:initial`);
+    updateInlineStyle(body, `overflow:hidden; touch-action:none`, `overflow:initial; touch-action:initial`);
+
 }
-
-// function updateClassVisibility(element, classToUpdate) {
-//     if (element.classList.contains(classToUpdate)) {
-//         removeClassFromElement(element, classToUpdate);
-//     } else {
-//         addClassToElement(element, classToUpdate);
-//     }
-// }
-
-// function updateMobileVisibility() {
-//     const mobile = document.querySelector(`.mobile-nav`);
-//     if (mobile.getAttribute(`style`) === `display:flex`) {
-//         mobile.setAttribute(`style`, `display:none`);
-//     } else {
-//         mobile.setAttribute(`style`, `display:flex`);
-//     }
-// }
-
-// function updateOverflowScroll() {
-//     const body = document.querySelector(`body`);
-//     if ()
-// }
 
 function updateInlineStyle(element, style1, style2) {
     if (element.getAttribute(`style`) === style1) {
