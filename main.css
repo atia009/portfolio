@@ -502,7 +502,6 @@ ul {
 }
 
 .desc__body,
-.desc__tech,
 .info__desc {
   font-size: max(0.75rem, 0.61538462em);
 }
