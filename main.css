@@ -718,10 +718,10 @@ svg {
 }
 
 .language__icon {
-  fill: var(--footer-color);
-  filter: drop-shadow(0 1px 1px #888888);
-  width: 30px;
-  height: 38px;
+  filter: drop-shadow(0 0.5px 1px #888888);
+  height: 32px;
+  opacity: .9;
+  width: 24px;
 }
 
 .footer__icon {
