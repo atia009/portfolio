@@ -56,6 +56,7 @@ function startWebsiteFunctionality() {
     startColorModeFunctionality();
     startSmoothScroll();
     startLanguagesFunctionality();
+    startlanguageFunctionality();
 }
 
 function generateProjectsMarkup() {
@@ -257,6 +258,34 @@ function startLanguagesFunctionality() {
         wrap.style.setProperty(`--shadow-start-opacity`, currentScroll);
         wrap.style.setProperty(`--shadow-end-opacity`, 1-currentScroll);
     });
+}
+
+function startlanguageFunctionality() {
+    const languageList = document.querySelectorAll(`.language`);
+    languageList.forEach(language => (language.addEventListener(`mouseenter`, startLanguageHoverAnimation)));
+    languageList.forEach(language => (language.addEventListener(`mouseleave`, startLanguageHoverAnimation)));
+    languageList.forEach(language => (language.addEventListener(`mousedown`, startLanguageActiveAnimation)));
+    languageList.forEach(language => (language.addEventListener(`mouseup`, startLanguageActiveAnimation)));
+}
+
+function startLanguageHoverAnimation() {
+    if ((this.style.boxShadow === ``) || (this.style.boxShadow === `var(--language-shadow-normal)`)) {
+        this.style.boxShadow = `var(--language-shadow-hover)`;
+        this.style.transform = `translateY(2px)`;
+    } else {
+        this.style.boxShadow = `var(--language-shadow-normal)`;
+        this.style.transform = `translateY(0px)`;
+    }
+}
+
+function startLanguageActiveAnimation() {
+    if ((this.style.boxShadow === ``) || (this.style.boxShadow === `var(--language-shadow-hover)`)) {
+        this.style.boxShadow = `var(--language-shadow-active)`;
+        this.style.transform = `translateY(4px)`;
+    } else {
+        this.style.boxShadow = `var(--language-shadow-hover)`;
+        this.style.transform = `translateY(2px)`;
+    }
 }
 
 // asynchrounous calls
