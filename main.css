@@ -622,7 +622,7 @@ ul {
   flex-flow: row nowrap;
   gap: 20px;
   overflow-x: scroll;
-  padding: 15px 20px;
+  padding: 30px 20px;
   scroll-snap-type: x mandatory;
   width: 100%;
 }
