@@ -55,6 +55,7 @@ function startWebsiteFunctionality() {
     startNavFunctionality();
     startColorModeFunctionality();
     startSmoothScroll();
+    startLanguagesFunctionality();
 }
 
 function generateProjectsMarkup() {
@@ -246,6 +247,17 @@ function startMediaQueryFunctionality(screenSize) {
     }
 }
 
+function startLanguagesFunctionality() {
+    const languages = document.querySelector('.languages');
+    const wrap = document.querySelector('.languages-wrap');
+    const scrollWidth = languages.scrollWidth - wrap.offsetWidth;
+
+    languages.addEventListener('scroll', function(){
+        let currentScroll = this.scrollLeft / (scrollWidth);  
+        wrap.style.setProperty(`--shadow-start-opacity`, currentScroll);
+        wrap.style.setProperty(`--shadow-end-opacity`, 1-currentScroll);
+    });
+}
 
 // asynchrounous calls
 window.addEventListener("DOMContentLoaded", startWebsiteFunctionality);
