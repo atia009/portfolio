@@ -1,6 +1,5 @@
 // globals
 const projects = [];
-let typedCount = 0;
 const mediaDesktop = window.matchMedia(`(min-width:700px)`);
 
 // constructor
@@ -214,15 +213,17 @@ function setRootVariableValue(name, value) {
     document.documentElement.style.setProperty(name, value);
 }
 
-function startTypedEffect() {
-    const subtitle = `Front-end Developer`;
-    let lettersToType = subtitle.slice(0, typedCount);
-    const intro = document.querySelector(`.intro__subtitle`);
-    intro.textContent = lettersToType;
-    if (lettersToType.length != intro.length) {
+function startIntroAnimation() {
+    startTypedEffect(document.querySelector(`.intro__subtitle`), `Front-end Developer`, 0);
+}
+
+function startTypedEffect(element, text, typedCount) {
+    let lettersToType = text.slice(0, typedCount);
+    element.textContent = lettersToType;
+    if (lettersToType.length != element.length) {
         setTimeout(() => {
             typedCount++;
-            startTypedEffect();
+            startTypedEffect(element, text, typedCount);
         }, 100);
     } 
 }
@@ -290,7 +291,7 @@ function startLanguageActiveAnimation() {
 
 // asynchrounous calls
 window.addEventListener("DOMContentLoaded", startWebsiteFunctionality);
-setTimeout(startTypedEffect, 1000);
+setTimeout(startIntroAnimation, 1000);
 mediaDesktop.addEventListener("change", function(screenSize){
     startMediaQueryFunctionality(screenSize.target);
 });
