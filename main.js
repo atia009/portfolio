@@ -289,9 +289,34 @@ function startLanguageActiveAnimation() {
     }
 }
 
+function startScrollAnimations() {
+    const position = this.scrollY;
+    if (isPageAtPosition(position, getElementPosition(document.querySelector(`#about`))) && getTechTitleContent() == ``) {
+        updateTechTitle(`Recent Technologies`);
+    }
+}
+
+function getElementPosition(element) {
+    return element.offsetTop - element.offsetHeight;
+}
+
+function getTechTitleContent() {
+    return document.querySelector(`.desc__tech`).textContent;
+}
+
+function isPageAtPosition(currentPosition, desiredPosition) {
+    return currentPosition > desiredPosition;
+}
+
+function updateTechTitle(text) {
+    startTypedEffect(document.querySelector( `.desc__tech`), text, 0);
+}
+
+
 // asynchrounous calls
 window.addEventListener("DOMContentLoaded", startWebsiteFunctionality);
 setTimeout(startIntroAnimation, 1000);
+window.addEventListener("scroll", startScrollAnimations);
 mediaDesktop.addEventListener("change", function(screenSize){
     startMediaQueryFunctionality(screenSize.target);
 });
