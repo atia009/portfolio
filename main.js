@@ -214,13 +214,13 @@ function setRootVariableValue(name, value) {
 }
 
 function startIntroAnimation() {
-    startTypedEffect(document.querySelector(`.intro__subtitle`), `Front-end Developer`, 0);
+    startTypedEffect(document.querySelector(`.intro__subtitle`), `Front-end Developer`, 1);
 }
 
 function startTypedEffect(element, text, typedCount) {
     let lettersToType = text.slice(0, typedCount);
     element.textContent = lettersToType;
-    if (lettersToType.length != element.length) {
+    if (lettersToType.length != text.length) {
         setTimeout(() => {
             typedCount++;
             startTypedEffect(element, text, typedCount);
@@ -309,7 +309,7 @@ function isPageAtPosition(currentPosition, desiredPosition) {
 }
 
 function updateTechTitle(text) {
-    startTypedEffect(document.querySelector( `.desc__tech`), text, 0);
+    startTypedEffect(document.querySelector( `.desc__tech`), text, 1);
 }
 
 
