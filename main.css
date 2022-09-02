@@ -533,7 +533,7 @@ ul {
   margin: 0 0 25px;
 }
 
-.intro__subtitle::after {
+.intro__subtitle::after, .desc__tech::after {
   animation: blink 0.8s infinite alternate step-end;
   border-left: 1px solid var(--txt-toggle);
   content: "";
