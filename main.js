@@ -273,7 +273,6 @@ function startLanguageHoverAnimation() {
     if ((this.style.boxShadow === ``) || (this.style.boxShadow === `var(--language-shadow-normal)`)) {
         this.style.boxShadow = `var(--language-shadow-hover)`;
         this.style.transform = `translateY(2px)`;
-        updateTechTitle(this.dataset.class);
     } else {
         this.style.boxShadow = `var(--language-shadow-normal)`;
         this.style.transform = `translateY(0px)`;
@@ -284,6 +283,7 @@ function startLanguageActiveAnimation() {
     if ((this.style.boxShadow === ``) || (this.style.boxShadow === `var(--language-shadow-hover)`)) {
         this.style.boxShadow = `var(--language-shadow-active)`;
         this.style.transform = `translateY(4px)`;
+        updateTechTitle(this.dataset.class);
     } else {
         this.style.boxShadow = `var(--language-shadow-hover)`;
         this.style.transform = `translateY(2px)`;
